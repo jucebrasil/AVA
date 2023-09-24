@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  background-color: #2e3192;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+img {
+  width: 150px;
+  margin-left: 30px;
+}
+.container-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-texto {
+  margin-left: 200px;
+  margin-right: 200px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.icons button {
+  width: 50px;
+  height: 50px;
+  background-image: linear-gradient(35deg, #2e3192, #cdcecf);
+  border: none;
+  margin-left: 150px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.icons button a i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.container-video {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.video {
+  margin: 10px;
+  align-items: center;
+  display: inline-block;
+}
+
+p {
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #2e3192;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.copyright p {
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 13px;
+  opacity: 0.6;
+  padding: 0 auto;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+}
