@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  justify-content: space-around;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  border: 3px solid #73ad21;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div#container {
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  background-color: #2e3192;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.texto p {
+  margin: 0;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: justify;
+  text-indent: 50px;
+}
+
+img {
+  width: 150px;
+  margin-left: 30px;
+}
+
+p {
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  color: #2e3192;
+  font-weight: semi-bold;
+  text-align: center;
+  font-size: 40px;
+}
+.texto p {
+  margin-right: 100px;
+  padding-right: 50px;
+}
+
+.container-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-texto {
+  margin-left: 50px;
+  color: white;
+  margin-right: 300px;
+}
+.icons button {
+  width: 50px;
+  height: 50px;
+  background-image: linear-gradient(35deg, #2e3192, #cdcecf);
+  border: none;
+  margin-right: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.icons button a i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.glow-on-hover {
+  width: 230px;
+  height: 70px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-family: Kanit;
+  font-weight: Semi-Bold;
+  font-size: 18px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px;
+  margin: 10px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2e3192;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

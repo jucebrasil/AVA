@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  background-color: #2e3192;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+div#container {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.logo-imagem img {
+  width: 150px;
+  margin: 10px 50px 10px 30px;
+  vertical-align: middle;
+}
+
+.logo-texto h1 {
+  margin-left: 50px;
+  color: #fff;
+}
+
+p {
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #2e3192;
+  font-weight: bold;
+  font-size: 16px;
+}
+.container-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-texto {
+  margin-left: 100px;
+  color: white;
+  margin: 0 auto;
+  margin-right: 300px;
+}
+.icons button {
+  width: 50px;
+  height: 50px;
+  background-image: linear-gradient(35deg, #2e3192, #cdcecf);
+  border: none;
+  margin-right: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.icons button a i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.container-pdf {
+  display: inline-block;
+  align-items: center;
+  vertical-align: middle;
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pdf {
+  margin: 30px;
+  align-items: center;
+  display: inline-block;
+  width: 170px;
+}
+
+.pdf a {
+  text-align: center;
+  display: block;
+  width: 150px;
+}
+.pdf img {
+  width: 170px;
+  height: 250px;
+  border: 1px solid #cdcecf;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  display: block;
+}
+/* .pdf p {
+  text-align: center;
+  color: #2e3192;
+  margin: 0;
+  width: 170px;
+  font-size: 12px;
+}
+.pdf-texto p {
+  text-align: center;
+} */
