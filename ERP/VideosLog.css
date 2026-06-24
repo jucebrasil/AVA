@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Estilos Gerais */
+.interface {
+  width: 100%;
+  max-width: 1120px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Estilo do cabeçalho */
+header {
+  /* background-color: #2e3192; */
+  background-color: #262870;
+  height: 100px;
+}
+h1 {
+  color: #2e3192;
+  font-family: "Poppins", sans-serif, 100, normal;
+}
+
+.logotipo,
+.menu-desktop {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+
+  position: relative;
+  height: 100%;
+}
+.logotipo {
+  width: 20%;
+  margin-left: -4px;
+}
+.menu-desktop {
+  width: 80%;
+}
+.logotipo img {
+  width: 70%;
+  max-width: 220px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu-desktop h2 {
+  color: #fff;
+  font-weight: 400;
+  margin-right: 80px;
+  text-align: center;
+}
+.menu-desktop ul {
+  list-style-type: none;
+  text-align: right;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-left: 30px;
+}
+.menu-desktop ul li {
+  display: inline-block;
+  margin: 0 30px;
+}
+.menu-desktop ul li a {
+  color: #ffff;
+  text-decoration: none;
+}
+.menu-desktop ul li a button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  width: 140px;
+  height: 40px;
+  border-radius: 15px;
+  color: #ffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+img {
+  width: 150px;
+  margin-left: 30px;
+}
+
+.container-video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Alinha os vídeos no centro horizontalmente */
+  align-items: center; /* Opcional: alinha os vídeos no centro verticalmente, se necessário */
+  gap: 20px; /* Espaçamento entre os blocos */
+  padding: 20px;
+  margin: 0 auto; /* Garante centralização */
+  align-content: stretch;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo de cada bloco */
+  max-width: 380px;
+  width: 100%;
+  margin: 10px;
+  align-content: stretch;
+}
+
+.video iframe {
+  width: 100%;
+  height: 80px;
+  border: none;
+}
+
+.video-texto p {
+  color: #2e3192;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center; /* Alinha o texto no centro */
+  margin-top: 10px;
+}
+
+h1 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-texto {
+  margin-left: 100px;
+  color: white;
+  margin: 0 auto;
+}
+/* Rodapé Novo*/
+.copyright {
+  width: 100%;
+  position: fixed; /* Mantém o footer fixo no final da página */
+  bottom: 0; /* Posiciona o footer no final da tela */
+  left: 0;
+  background-color: transparent; /*Cor de fundo opcional */
+  padding: 0;
+  margin: 0;
+}
+
+.copyright p {
+  text-align: center;
+  margin: 0; /* Remove as margens para centralizar */
+  color: #fff;
+  /* background-color: #2e3192; */
+  background-color: #262870;
+  font-size: 0.8rem;
+  text-shadow: #0d0027;
+  letter-spacing: 1px;
+  /* background-image: linear-gradient(45deg, #2e3192, #5b0a01); */
+}

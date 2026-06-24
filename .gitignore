@@ -1,0 +1,11 @@
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.zip
+*.rar
+*.7z
+
+ERP/Videos/
+ERP/LOG/
+node_modules

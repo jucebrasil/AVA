@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  vertical-align: middle;
+  justify-content: space-around;
+}
+/* Estilos Gerais */
+.interface {
+  max-width: 1090px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Estilo do cabeçalho */
+header {
+  /* background-color: #2e3192; */
+  background-color: #262870;
+  height: 100px;
+}
+h1 {
+  color: #2e3192;
+  font-family: "Poppins", sans-serif, 100, normal;
+}
+
+.logotipo,
+.menu-desktop {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+
+  position: relative;
+  height: 100%;
+}
+.logotipo {
+  width: 20%;
+  margin: 0 0 0 -50px;
+  text-align: center;
+}
+.menu-desktop {
+  width: 80%;
+  text-align: center;
+}
+.logotipo img {
+  width: 70%;
+  max-width: 220px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu-desktop h2 {
+  color: #fff;
+  font-weight: 400;
+  margin-right: 110px;
+  text-align: center;
+}
+.menu-desktop ul {
+  list-style-type: none;
+  text-align: right;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-left: 30px;
+}
+.menu-desktop ul li {
+  display: inline-block;
+  margin: 0 30px;
+}
+.menu-desktop ul li a {
+  color: #ffff;
+  text-decoration: none;
+}
+.menu-desktop ul li a button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  width: 140px;
+  height: 40px;
+  border-radius: 15px;
+  color: #ffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*Sessão Ambiente de Aprendizado*/
+section.container {
+  width: 100%;
+  padding: 50px 0 0 0;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+span {
+  font-size: 0.7rem;
+}
+
+.container-pdf {
+  display: flex; /* Altere inline para flex */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: flex-start; /* Alinha os itens no topo */
+  gap: 5px; /* Adiciona espaçamento uniforme entre os itens */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pdf {
+  display: flex; /* Torna os itens filhos flexíveis */
+  flex-direction: column; /* Ordena os elementos verticalmente */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  justify-content: flex-start; /* Alinha os elementos no topo */
+  width: 190px; /* Largura fixa */
+  margin: 5px;
+  text-align: center;
+}
+
+.pdf img {
+  width: 100%; /* Garante que a imagem ocupe toda a largura do container */
+  margin-bottom: 10px;
+  border: 1px solid #cdcecf;
+  box-shadow: 0 8px 16px 0 rgba(46, 49, 146, 0.4),
+    0 6px 20px 0 rgba(46, 49, 146, 0.3);
+}
+
+.pdf p {
+  text-align: center;
+  color: #2e3192;
+  font-size: 0.9rem; /* Ajuste do tamanho da fonte */
+  font-weight: bold;
+  margin: 0;
+  padding: 2px 0;
+  max-width: 100%;
+}
+
+/* Rodapé Novo*/
+.copyright {
+  width: 100%;
+  position: fixed; /* Mantém o footer fixo no final da página */
+  bottom: 0; /* Posiciona o footer no final da tela */
+  left: 0;
+  background-color: transparent; /*Cor de fundo opcional */
+  padding: 0;
+  margin: 0;
+}
+
+.copyright p {
+  text-align: center;
+  margin: 0; /* Remove as margens para centralizar */
+  color: #fff;
+  /* background-color: #2e3192; */
+  /* background-color: #19193f; */
+  background-color: #262870;
+  font-size: 0.8rem;
+  text-shadow: #0d0027;
+  letter-spacing: 1px;
+  /* background-image: linear-gradient(45deg, #2e3192, #5b0a01); */
+}
