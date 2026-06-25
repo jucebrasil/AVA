@@ -105,12 +105,3 @@ Desenvolvido por Juce Brasil.
 
 Projeto de uso interno e educacional.
 Todos os direitos reservados à empresa.
-
-### Algumas melhorias que deixariam o README ainda mais profissional:
-
-* Adicionar uma captura de tela da página inicial.
-* Inserir um logo do AVA no topo.
-* Criar uma seção "Módulos Disponíveis" (Compras, Vendas, Financeiro, WMS, Fiscal, etc.).
-* Adicionar badges do GitHub (último commit, versão, licença).
-
-Se você me mostrar a estrutura das pastas principais (`dir` ou uma captura da página inicial), posso montar um README personalizado e bem mais profissional para o seu projeto.
