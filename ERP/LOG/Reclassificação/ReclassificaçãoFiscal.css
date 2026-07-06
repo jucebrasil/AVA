@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+  color: #333;
+}
+
+.topo {
+  background: #1f4e79;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu {
+  background: #163a5c;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tecnico {
+  border-left: 6px solid #1f4e79;
+}
+
+h2 {
+  color: #1f4e79;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ddd;
+  margin-top: 20px;
+}
