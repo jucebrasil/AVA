@@ -11,7 +11,10 @@
 .interface {
   max-width: 1120px;
   height: 100%;
-  margin: 0 auto;
+  margin: 0;
+}
+body{
+  height: 100%;
 }
 /* Estilo do cabeçalho */
 header {
@@ -90,15 +93,15 @@ article.logotipo {
   height: 40px;
   border-radius: 15px;
   color: #ffff;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
 }
 .pagina-inicial {
   flex-wrap: wrap;
-  margin: 0 50px;
+  margin: 0 10px;
 }
 section.pagina-inicial {
-  padding: 0 0 0 5px;
+  padding: 10px 0;
   justify-content: space-between;
   text-align: center;
   /*flex-wrap: wrap;*/
@@ -109,14 +112,14 @@ section.pagina-inicial {
 }
 .pagina-inicial .titulo-sessao h2 {
   color: #2e3192;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
-  padding: 2px 0;
+  padding: 0;
 }
 .pagina-inicial .titulo-sessao p {
   color: #2e3192;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0;
   text-align: center;
 }
@@ -137,7 +140,7 @@ article.ambiente-container {
 }
 .ambiente-container,
 .glow-on-hover {
-  width: 200px;
+  width: 195px;
   height: 70px;
   align-items: center;
   text-align: center;
@@ -149,12 +152,12 @@ article.ambiente-container {
   width: 80%;
 }
 span {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
 }
 
 .glow-on-hover {
-  width: 17%;
-  height: 42px;
+  width: 12%;
+  height: 38px;
   outline: none;
   color: #fff;
   background: #111;
@@ -164,7 +167,7 @@ span {
   border-radius: 10px;
   font-family: Poppins;
   font-weight: 600;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   box-sizing: 0.5rem;
   /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   box-shadow: 0 8px 16px 0 rgba(46, 49, 146, 0.4),
@@ -263,7 +266,7 @@ span {
   /* background-color: #2e3192; */
   /* background-color: #19193f; */
   background-color: #262870;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-shadow: #0d0027;
   letter-spacing: 1px;
   /* background-image: linear-gradient(45deg, #2e3192, #5b0a01); */
@@ -274,6 +277,6 @@ span {
     height: 65px;
   }
   .glow-on-hover p {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
 }
