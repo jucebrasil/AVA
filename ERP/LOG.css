@@ -115,12 +115,12 @@ section.pagina-inicial {
   font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
-  padding: 0;
+  padding: 0 15px;
 }
 .pagina-inicial .titulo-sessao p {
   color: #2e3192;
   font-size: 1.1rem;
-  padding: 0;
+  padding: 0 0 10px 0;
   text-align: center;
 }
 
