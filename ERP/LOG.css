@@ -108,7 +108,7 @@ section.pagina-inicial {
 }
 .pagina-inicial .titulo-sessao {
   text-align: center;
-  margin: 0;
+  margin: 0 15px;
 }
 .pagina-inicial .titulo-sessao h2 {
   color: #2e3192;
