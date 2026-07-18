@@ -61,7 +61,7 @@ article.logotipo {
 .menu-desktop h3 {
   color: #fff;
   font-weight: 400;
-  margin-right: 150px;
+  margin-right: 200px;
   text-align: center;
   font-size: 22px;
 }
@@ -89,9 +89,9 @@ article.logotipo {
 .menu-desktop ul li a button {
   background-color: transparent;
   border: 2px solid #fff;
-  width: 140px;
-  height: 40px;
-  border-radius: 15px;
+  width: 90px;
+  height: 35px;
+  border-radius: 13px;
   color: #ffff;
   font-size: 16px;
   cursor: pointer;
