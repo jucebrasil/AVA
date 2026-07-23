@@ -37,7 +37,7 @@ h1 {
   height: 100%;
 }
 article.logotipo {
-  width: 15%;
+  width: 17%;
   margin-left: -4px;
   padding: 10px 5px 5px;
 }
@@ -45,7 +45,7 @@ article.logotipo {
   width: 85%;
 }
 .logotipo img {
-  width: 57%;
+  width: 80%;
   max-width: 220px;
 
   position: absolute;
