@@ -22,10 +22,10 @@ xmlns="http://www.w3.org/TR/REC-html40">
  var c_lTabs=4;
 
  var c_rgszSh=new Array(c_lTabs);
- c_rgszSh[0] = "Gerarï¿½Codigoï¿½deï¿½Barras";
- c_rgszSh[1] = "Atualizarï¿½Nota";
+ c_rgszSh[0] = "Gerar Codigo de Barras";
+ c_rgszSh[1] = "Atualizar Nota";
  c_rgszSh[2] = "ClientesProdutosVencimento";
- c_rgszSh[3] = "Gerarï¿½Localizadores";
+ c_rgszSh[3] = "Gerar Localizadores";
 
 
 
@@ -55,7 +55,7 @@ function fnGetIEVer()
 function fnBuildFrameset()
 {
  var szHTML="<frameset rows=\"*,18\" border=0 width=0 frameborder=no framespacing=0>"+
-  "<frame src=\""+document.all.item("shLink")[0].href+"\" name=\"frSheet\" noresize>"+
+  "<frame src=\""+document.all.item("shLink")[3].href+"\" name=\"frSheet\" noresize>"+
   "<frameset cols=\"54,*\" border=0 width=0 frameborder=no framespacing=0>"+
   "<frame src=\"\" name=\"frScroll\" marginwidth=0 marginheight=0 scrolling=no>"+
   "<frame src=\"\" name=\"frTabs\" marginwidth=0 marginheight=0 scrolling=no>"+
@@ -320,10 +320,11 @@ function fnSetActiveSheet(iSh)
    </x:ExcelWorksheet>
   </x:ExcelWorksheets>
   <x:Stylesheet HRef="FerramentasLog_arquivos/stylesheet.css"/>
-  <x:WindowHeight>7548</x:WindowHeight>
-  <x:WindowWidth>20496</x:WindowWidth>
+  <x:WindowHeight>7545</x:WindowHeight>
+  <x:WindowWidth>20490</x:WindowWidth>
   <x:WindowTopX>32767</x:WindowTopX>
   <x:WindowTopY>32767</x:WindowTopY>
+  <x:ActiveSheet>3</x:ActiveSheet>
   <x:ProtectStructure>False</x:ProtectStructure>
   <x:ProtectWindows>False</x:ProtectWindows>
  </x:ExcelWorkbook>
@@ -331,11 +332,11 @@ function fnSetActiveSheet(iSh)
 </head>
 
 <frameset rows="*,39" border=0 width=0 frameborder=no framespacing=0>
- <frame src="FerramentasLog_arquivos/sheet001.html" name="frSheet">
+ <frame src="FerramentasLog_arquivos/sheet004.html" name="frSheet">
  <frame src="FerramentasLog_arquivos/tabstrip.html" name="frTabs" marginwidth=0 marginheight=0>
  <noframes>
   <body>
-   <p>Esta pï¿½gina usa quadros, mas o seu navegador nï¿½o dï¿½ suporte para eles.</p>
+   <p>Esta página usa quadros, mas o seu navegador não dá suporte para eles.</p>
   </body>
  </noframes>
 </frameset>
