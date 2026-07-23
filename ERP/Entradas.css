@@ -9,16 +9,17 @@
 }
 /* Estilos Gerais */
 .interface {
-  max-width: 1090px;
+  max-width: 1120px;
   height: 100%;
-  margin: 0 auto;
-  text-align: center;
+  margin: 0;
 }
-
+body{
+  height: 100%;
+}
 /* Estilo do cabeçalho */
 header {
-  /* background-color: #2e3192; */
   background-color: #262870;
+  /* background-color: #19193f; */
   height: 100px;
 }
 h1 {
@@ -35,18 +36,18 @@ h1 {
   position: relative;
   height: 100%;
 }
-.logotipo {
-  width: 20%;
-  margin: 0 0 0 -50px;
-  text-align: center;
+article.logotipo {
+  width: 15%;
+  margin-left: -4px;
+  padding: 10px 5px 5px;
 }
 .menu-desktop {
-  width: 80%;
-  text-align: center;
+  width: 85%;
 }
 .logotipo img {
-  width: 70%;
+  width: 57%;
   max-width: 220px;
+  margin-left: 100px;
 
   position: absolute;
   top: 50%;
@@ -55,22 +56,31 @@ h1 {
 .menu-desktop h2 {
   color: #fff;
   font-weight: 400;
-  margin-right: 110px;
+  margin-right: 80px;
   text-align: center;
+}
+.menu-desktop h3 {
+  color: #fff;
+  font-weight: 400;
+  margin-right: 150px;
+  text-align: center;
+  font-size: 22px;
 }
 .menu-desktop ul {
   list-style-type: none;
-  text-align: right;
-
+  text-align: center;
+  padding: 0 10px;
+  
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  margin-left: 30px;
+  margin-left: 100px;
 }
 .menu-desktop ul li {
   display: inline-block;
-  margin: 0 30px;
+  text-align: center;
+  margin: 0 10px;
 }
 .menu-desktop ul li a {
   color: #ffff;
@@ -79,64 +89,165 @@ h1 {
 .menu-desktop ul li a button {
   background-color: transparent;
   border: 2px solid #fff;
-  width: 140px;
-  height: 40px;
-  border-radius: 15px;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
   color: #ffff;
   font-size: 16px;
   cursor: pointer;
 }
-/*Sessão Ambiente de Aprendizado*/
-section.container {
-  width: 100%;
-  padding: 50px 0 0 0;
+.pagina-inicial {
+  flex-wrap: wrap;
+  margin: 0 10px;
+}
+section.pagina-inicial {
+  padding: 10px 0;
+  justify-content: space-between;
+  text-align: center;
+  /*flex-wrap: wrap;*/
+}
+.pagina-inicial .titulo-sessao {
+  text-align: center;
+  margin: 0;
+}
+.pagina-inicial .titulo-sessao h2 {
+  color: #2e3192;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 50px 0;
+}
+.pagina-inicial .titulo-sessao p {
+  color: #2e3192;
+  font-size: 1.1rem;
+  padding: 0 15px;
   text-align: center;
 }
-a {
+
+article {
+  text-align: center;
+}
+
+article.ambiente-container {
+  width: 100%;
+  flex-direction: row;
+  display: inline;
+  justify-content: center;
+  margin: 0;
   text-decoration: none;
+  text-align: center;
+  padding: 0 -4px;
+}
+.ambiente-container,
+.glow-on-hover {
+  width: 195px;
+  height: 70px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.ambiente-container,
+.glow-on-hover a {
+  width: 80%;
 }
 span {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 
-.container-pdf {
-  display: flex; /* Altere inline para flex */
-  flex-wrap: wrap; /* Permite que os itens quebrem linha */
-  justify-content: center; /* Centraliza os itens horizontalmente */
-  align-items: flex-start; /* Alinha os itens no topo */
-  gap: 5px; /* Adiciona espaçamento uniforme entre os itens */
-  margin: 0 auto;
-  text-align: center;
-}
-
-.pdf {
-  display: flex; /* Torna os itens filhos flexíveis */
-  flex-direction: column; /* Ordena os elementos verticalmente */
-  align-items: center; /* Centraliza os elementos horizontalmente */
-  justify-content: flex-start; /* Alinha os elementos no topo */
-  width: 190px; /* Largura fixa */
-  margin: 5px;
-  text-align: center;
-}
-
-.pdf img {
-  width: 100%; /* Garante que a imagem ocupe toda a largura do container */
-  margin-bottom: 10px;
-  border: 1px solid #cdcecf;
+.glow-on-hover {
+  width: 12%;
+  height: 45px;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 0.6rem;
+  box-sizing: 0.5rem;
+  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   box-shadow: 0 8px 16px 0 rgba(46, 49, 146, 0.4),
-    0 8px 20px 0 rgba(46, 49, 146, 0.3);
+    0 6px 20px 0 rgba(46, 49, 146, 0.3);
+  border: 1px;
+  margin: 5px;
+  padding: 2px;
+  text-align: center;
+  align-items: middle;
+  justify-content: center;
 }
 
-.pdf p {
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff3700,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #e30000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.glow-on-hover:active {
+  /* color: #000; */
+  color: #262870;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: #2e3192; */
+  /* background: #19193f; */
+  background: #262870;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  padding: 0;
+}
+
+/*Rodapé antigo*/
+/* .copyright {
+  width: 100%;
+}
+.copyright p {
   text-align: center;
   color: #2e3192;
-  font-size: 0.9rem; /* Ajuste do tamanho da fonte */
-  font-weight: bold;
-  margin: 0;
-  padding: 2px 0;
-  max-width: 100%;
+  font-size: 1rem;
+  margin-bottom: 0 10px 0 20px;
 }
-
+ */
 /* Rodapé Novo*/
 .copyright {
   width: 100%;
@@ -155,8 +266,17 @@ span {
   /* background-color: #2e3192; */
   /* background-color: #19193f; */
   background-color: #262870;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-shadow: #0d0027;
   letter-spacing: 1px;
   /* background-image: linear-gradient(45deg, #2e3192, #5b0a01); */
+}
+@media screen and (max-width: 1050px) {
+  .glow-on-hover {
+    width: 11%;
+    height: 65px;
+  }
+  .glow-on-hover p {
+    font-size: 0.6rem;
+  }
 }
