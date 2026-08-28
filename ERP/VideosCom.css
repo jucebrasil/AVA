@@ -121,6 +121,12 @@ span {
   padding: 0;
 }
 
+.video video {
+  width: 250px;
+  height: 140px;
+  object-fit: cover;
+}
+
 .video iframe {
   width: 100%;
   height: 380px;
@@ -198,14 +204,17 @@ span {
 .youtube-card {
   position: relative;
   display: block;
+
   width: 250px;
   height: 140px;
+
   overflow: hidden;
 }
 
 .youtube-capa {
-  width: 100%;
+  width: 250px;
   height: 140px;
+
   object-fit: cover;
   display: block;
 }
