@@ -139,8 +139,8 @@ span {
 .video video {
   display: block;
 
-  width: 250px !important;
-  height: 140px !important;
+  width: 250px;
+  height: 140px;
 
   min-width: 250px;
   max-width: 250px;
@@ -160,8 +160,8 @@ span {
 
   display: block;
 
-  width: 250px !important;
-  height: 140px !important;
+  width: 250px;
+  height: 140px;
 
   min-width: 250px;
   max-width: 250px;
@@ -177,8 +177,8 @@ span {
 .youtube-capa {
   display: block;
 
-  width: 250px !important;
-  height: 140px !important;
+  width: 250px;
+  height: 140px;
 
   min-width: 250px;
   max-width: 250px;
