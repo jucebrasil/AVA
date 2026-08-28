@@ -96,7 +96,7 @@ span {
   flex-wrap: wrap;
   justify-content: center; /* Alinha os vídeos no centro horizontalmente */
   align-items: center; /* Opcional: alinha os vídeos no centro verticalmente, se necessário */
-  gap: 20px; /* Espaçamento entre os blocos */
+  /*gap: 20px;  Espaçamento entre os blocos */
   padding: 20px;
   margin: 0 auto; /* Garante centralização */
   align-content: stretch;
