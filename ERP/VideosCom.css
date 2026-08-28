@@ -109,8 +109,8 @@ span {
 
 .video {
   width: 100%;
-  max-width: 380px;
-  min-height: 225px;
+  max-width: 350px;
+  min-height: 200px;
 
   margin: 5px;
   padding: 5px 0 10px;
