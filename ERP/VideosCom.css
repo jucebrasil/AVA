@@ -109,8 +109,8 @@ span {
 
 .video {
   width: 100%;
-  max-width: 380px;
-  min-height: 150px;
+  max-width: 330px;
+  min-height: 180px;
 
   margin: 5px;
   padding: 5px 0 10px;
@@ -177,7 +177,7 @@ span {
 .youtube-capa {
   display: block;
 
-  width: 250px;
+  width: 330px;
   height: 140px;
 
   min-width: 250px;
@@ -187,6 +187,7 @@ span {
 
   margin: 0;
   padding: 0;
+  border-radius: 50%;
 }
 
 
