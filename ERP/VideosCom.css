@@ -217,7 +217,7 @@ span {
 
   max-width: 330px;
 
-  min-height: 100px;
+  min-height: 160px;
 
   margin: 5px;
 
@@ -248,7 +248,7 @@ span {
 
   max-width: 330px;
 
-  height: 160px;
+  height: 130px;
 
   aspect-ratio: 16 / 9;
 
@@ -271,7 +271,7 @@ span {
 .youtube-capa {
   width: 100%;
 
-  height: 162px;
+  height: 130px;
 
   display: block;
 
