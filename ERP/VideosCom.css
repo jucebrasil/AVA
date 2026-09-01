@@ -217,7 +217,7 @@ span {
 
   max-width: 330px;
 
-  min-height: 130px;
+  min-height: 180px;
 
   margin: 5px;
 
@@ -248,8 +248,6 @@ span {
 
   max-width: 330px;
 
-  height: 130px;
-
   aspect-ratio: 16 / 9;
 
   position: relative;
@@ -271,7 +269,7 @@ span {
 .youtube-capa {
   width: 100%;
 
-  height: 130px;
+  height: 100%;
 
   display: block;
 
@@ -344,7 +342,7 @@ span {
 
   font-family: "Poppins", sans-serif;
 
-  font-size: 12px;
+  font-size: 14px;
 
   font-weight: 600;
 
