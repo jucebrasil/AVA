@@ -392,7 +392,8 @@ span {
 
   position: fixed;
 
-  bottom: 5px;
+  top: 5px;
+  bottom: 0;
   left: 0;
 
   background-color: transparent;
