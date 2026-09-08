@@ -204,7 +204,9 @@ span {
 
   padding: 5px;
 
-  margin: 0 auto;
+  /*margin: 0 auto;*/
+
+  margin-bottom: 25px;
 }
 
 
