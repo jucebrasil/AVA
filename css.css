@@ -209,6 +209,7 @@ background-color: #262870;
 font-size: 0.8rem; 
 text-shadow: #0d0027; 
 letter-spacing: 1px; /* background-image: linear-gradient(45deg, #2e3192, #5b0a01); */ 
+position: fixed; /* Mantém o footer fixo no final da página */
 }
 
 /* =========================
@@ -352,6 +353,7 @@ letter-spacing: 1px; /* background-image: linear-gradient(45deg, #2e3192, #5b0a0
 .copyright p {
   font-size: 0.68rem;
   padding: 8px 6px;
+  position: fixed; /* Mantém o footer fixo no final da página */
 }
 }
 
