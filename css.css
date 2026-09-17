@@ -201,15 +201,14 @@ footer {
 .copyright {
   width: 100%;
 }
-
 .copyright p {
-  background-color: #262870;
-  color: #fff;
-  text-align: center;
-  padding: 8px 10px;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  margin: 0;
+text-align: center; 
+margin: 0; /* Remove as margens para centralizar */ 
+color: #fff; /* background-color: #2e3192; */ /* background-color: #19193f; */ 
+background-color: #262870; 
+font-size: 0.8rem; 
+text-shadow: #0d0027; 
+letter-spacing: 1px; /* background-image: linear-gradient(45deg, #2e3192, #5b0a01); */ 
 }
 
 /* =========================
