@@ -347,13 +347,13 @@ footer {
   }
 
   footer {
-    margin-top: 16px;
-  }
+  margin-top: auto;
+}
 
-  .copyright p {
-    font-size: 0.6rem;
-    padding: 5px;
-  }
+.copyright p {
+  font-size: 0.68rem;
+  padding: 8px 6px;
+}
 }
 
 /* =========================
