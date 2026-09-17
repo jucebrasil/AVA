@@ -348,12 +348,13 @@ position: fixed; /* Mantém o footer fixo no final da página */
 
   footer {
   margin-top: auto;
+  position: fixed; /* Mantém o footer fixo no final da página */
 }
 
 .copyright p {
   font-size: 0.68rem;
   padding: 8px 6px;
-  position: fixed; /* Mantém o footer fixo no final da página */
+  
 }
 }
 
