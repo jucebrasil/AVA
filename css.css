@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,17 +11,30 @@
   font-family: "Poppins", sans-serif;
 }
 
-html,
-body {
+html {
   width: 100%;
   min-height: 100%;
-  height: 100%;
-  overflow-x: hidden;
 }
 
 body {
-  background: #f1f1f1;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #f8f9fa;
 }
+
+/* Estrutura principal da página */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Limite de largura do conteúdo */
 
 .interface {
   width: 100%;
@@ -26,14 +43,18 @@ body {
   padding: 0 20px;
 }
 
-/* =========================
+/* ==========================================
    CABEÇALHO
-========================= */
+========================================== */
 
 header {
+  width: 100%;
   background-color: #262870;
+
   flex-shrink: 0;
 }
+
+/* Organização horizontal */
 
 .header-content {
   height: 90px;
@@ -42,7 +63,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  gap: 20px;
 }
+
+/* ==========================================
+   LOGOTIPO PATRIMÔNIO
+========================================== */
 
 .logotipo {
   width: 150px;
@@ -51,93 +78,169 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  flex-shrink: 0;
 }
 
 .logotipo img {
   width: 100%;
   max-width: 140px;
   height: auto;
+
   display: block;
 }
 
+/* ==========================================
+   MENU DESKTOP
+========================================== */
+
 .menu-desktop {
   flex: 1;
+  min-width: 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  gap: 20px;
 }
+
+/* Título do cabeçalho */
 
 .menu-desktop h2 {
   color: #fff;
+
   font-size: 1.5rem;
   font-weight: 400;
+
   text-align: center;
 
   flex: 1;
 }
 
+/* Links do menu */
+
 .menu-links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+
   gap: 20px;
+
+  flex-shrink: 0;
 }
 
 .menu-links a {
   color: #fff;
+
   text-decoration: none;
+
   font-size: 1rem;
+
+  white-space: nowrap;
 }
 
-.menu-links button {
-  background: transparent;
-  border: 2px solid #fff;
+/* Botão Site */
 
+.menu-links button {
   width: 90px;
   height: 35px;
 
+  background-color: transparent;
+
+  border: 2px solid #fff;
   border-radius: 12px;
 
   color: #fff;
+
   font-size: 1rem;
 
   cursor: pointer;
+
+  transition: 0.3s;
 }
 
-/* =========================
+.menu-links button:hover {
+  background-color: #fff;
+  color: #262870;
+}
+
+/* ==========================================
    CONTEÚDO PRINCIPAL
-========================= */
+========================================== */
 
 section.pagina-inicial {
+  width: 100%;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   text-align: center;
-  padding: 20px 0 30px;
+
+  padding: 10px 0;
 }
+
+/* Interface dentro da página inicial */
+
+.pagina-inicial > .interface {
+  width: 100%;
+}
+
+/* ==========================================
+   TÍTULO DA PÁGINA
+========================================== */
 
 .titulo-sessao {
-  margin-bottom: 25px;
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 16px;
 }
 
+/* Logotipo Ativo ERP */
+
 .titulo-sessao img {
-  width: 110px;
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+
   display: block;
-  margin: 0 auto 10px;
+
+  margin: 0 auto 5px;
 }
+
+/* Bem-vindo */
 
 .pagina-inicial .titulo-sessao h2 {
   color: #2e3192;
-  font-size: 1.6rem;
+
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 8px;
+
+  text-align: center;
+
+  margin-bottom: 4px;
 }
+
+/* Frase de apresentação */
 
 .pagina-inicial .titulo-sessao p {
   color: #2e3192;
-  font-size: 0.95rem;
+
+  font-size: 0.9rem;
+
+  line-height: 1.4;
+
+  text-align: center;
 }
 
-/* =========================
-   CARDS
-========================= */
+/* ==========================================
+   CONTAINER DOS CARDS
+========================================== */
 
 .ambiente-container {
   width: 100%;
@@ -146,134 +249,352 @@ section.pagina-inicial {
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+
+  align-items: stretch;
 }
 
+/* Links dos cards */
+
 .ambiente-container a {
+  display: block;
+
+  width: 100%;
+
   text-decoration: none;
+
+  color: #2e3192;
 }
+
+/* ==========================================
+   ESTILO DOS CARDS
+========================================== */
 
 .ambiente-box {
   width: 100%;
-  height: 165px;
+  height: 155px;
 
   border: 2px solid #2e3192;
+
   border-radius: 0 60px 25px 60px;
 
   box-shadow: 6px 6px 0 #2e3192;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   align-items: center;
+  justify-content: center;
+
+  text-align: center;
 
   padding: 12px 8px;
 
   color: #2e3192;
+
+  transition: transform 0.3s;
 }
+
+/* Efeito ao passar o mouse */
+
+.ambiente-box:hover {
+  transform: translateY(-3px);
+}
+
+/* Ícones */
 
 .ambiente-box img {
   width: 42px;
   height: auto;
+
+  display: block;
+
   margin-bottom: 8px;
 }
 
+/* Nome do módulo */
+
 .ambiente-box h3 {
   color: #2e3192;
+
   font-size: 1rem;
+  font-weight: 700;
+
   line-height: 1.2;
+
   margin-bottom: 4px;
 }
 
+/* Descrição do módulo */
+
 .ambiente-box p {
   color: #2e3192;
+
   font-size: 0.76rem;
+  font-weight: 400;
+
   line-height: 1.3;
+
   text-align: center;
 }
 
-/* =========================
+/* ==========================================
    RODAPÉ
-========================= */
+========================================== */
 
 footer {
-  margin-top: auto;
   width: 100%;
+
+  margin-top: auto;
+
+  flex-shrink: 0;
+
+  position: static;
 }
 
 .copyright {
   width: 100%;
 }
+
 .copyright p {
-text-align: center; 
-margin: 0; /* Remove as margens para centralizar */ 
-color: #fff; /* background-color: #2e3192; */ /* background-color: #19193f; */ 
-background-color: #262870; 
-font-size: 0.8rem; 
-text-shadow: #0d0027; 
-letter-spacing: 1px; /* background-image: linear-gradient(45deg, #2e3192, #5b0a01); */ 
-/*position: fixed;  Mantém o footer fixo no final da página */
+  width: 100%;
+
+  background-color: #262870;
+
+  color: #fff;
+
+  text-align: center;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 1px;
+
+  padding: 4px 10px;
+
+  margin: 0;
 }
 
-/* =========================
-   TABLET
-========================= */
+/* ==========================================
+   NOTEBOOKS COM ALTURA REDUZIDA
+========================================== */
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 901px) and (max-height: 700px) {
 
-  .ambiente-container {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 600px;
+  /* Cabeçalho */
+
+  .header-content {
+    height: 75px;
+  }
+
+  .logotipo {
+    height: 75px;
+  }
+
+  .logotipo img {
+    max-width: 115px;
+  }
+
+  /* Conteúdo */
+
+  section.pagina-inicial {
+    padding: 5px 0;
+  }
+
+  /* Título */
+
+  .titulo-sessao {
+    margin-bottom: 12px;
+  }
+
+  .titulo-sessao img {
+    width: 85px;
+    margin-bottom: 3px;
+  }
+
+  .pagina-inicial .titulo-sessao h2 {
+    font-size: 1.35rem;
+    margin-bottom: 3px;
+  }
+
+  .pagina-inicial .titulo-sessao p {
+    font-size: 0.85rem;
+  }
+
+  /* Cards */
+
+  .ambiente-box {
+    height: 145px;
+  }
+
+  .ambiente-box img {
+    width: 36px;
+    margin-bottom: 5px;
+  }
+
+  /* Rodapé */
+
+  .copyright p {
+    padding: 3px 10px;
   }
 }
 
-/* =========================
-   CELULAR
-========================= */
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media screen and (min-width: 651px) and (max-width: 900px) {
+
+  /* Cabeçalho */
+
+  .header-content {
+    min-height: 90px;
+    height: auto;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .logotipo {
+    width: 110px;
+    height: auto;
+  }
+
+  .logotipo img {
+    max-width: 105px;
+  }
+
+  .menu-desktop {
+    gap: 12px;
+  }
+
+  .menu-desktop h2 {
+    font-size: 1.15rem;
+  }
+
+  .menu-links {
+    gap: 12px;
+  }
+
+  .menu-links a {
+    font-size: 0.85rem;
+  }
+
+  .menu-links button {
+    width: 75px;
+    height: 32px;
+
+    font-size: 0.85rem;
+  }
+
+  /* Cards */
+
+  .ambiente-container {
+    max-width: 600px;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .ambiente-box {
+    height: 150px;
+  }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
 
 @media screen and (max-width: 650px) {
+
+  /* Interface */
 
   .interface {
     padding: 0 12px;
   }
 
-  /* HEADER */
+  /* ======================================
+     CABEÇALHO MOBILE
+  ====================================== */
 
   .header-content {
-    min-height: auto;
+    height: auto;
+    min-height: 0;
 
+    display: flex;
     flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
 
     padding-top: 12px;
     padding-bottom: 14px;
   }
 
+  /* Logotipo */
+
   .logotipo {
     width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+
+    margin: 0;
   }
 
   .logotipo img {
     width: 70px;
+    max-width: 70px;
+
+    height: auto;
   }
+
+  /* Menu */
 
   .menu-desktop {
     width: 100%;
+    min-width: 0;
 
+    display: flex;
     flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
   }
+
+  /* Ambiente de Aprendizado */
 
   .menu-desktop h2 {
     font-size: 1.15rem;
-    margin-bottom: 10px;
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    text-align: center;
+
+    margin: 0;
   }
+
+  /* Install Sistema e Site */
 
   .menu-links {
     width: 100%;
 
+    display: flex;
+
+    align-items: center;
     justify-content: center;
+
+    flex-wrap: wrap;
 
     gap: 12px;
   }
@@ -289,85 +610,135 @@ letter-spacing: 1px; /* background-image: linear-gradient(45deg, #2e3192, #5b0a0
     font-size: 0.85rem;
   }
 
-  /* CONTEÚDO */
+  /* ======================================
+     CONTEÚDO MOBILE
+  ====================================== */
 
   section.pagina-inicial {
-    padding-top: 14px;
-    padding-bottom: 10px;
+    flex: 1;
+
+    justify-content: center;
+
+    padding: 14px 0 20px;
   }
+
+  /* Título */
 
   .titulo-sessao {
     margin-bottom: 16px;
   }
 
+  /* Logotipo Ativo */
+
   .titulo-sessao img {
     width: 88px;
+    height: auto;
+
     margin-bottom: 5px;
   }
 
+  /* Bem-vindo */
+
   .pagina-inicial .titulo-sessao h2 {
     font-size: 1.15rem;
+
     margin-bottom: 4px;
   }
 
+  /* Frase */
+
   .pagina-inicial .titulo-sessao p {
     font-size: 0.72rem;
+
     line-height: 1.2;
   }
 
-  /* CARDS */
+  /* ======================================
+     CARDS MOBILE
+  ====================================== */
 
   .ambiente-container {
-    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 12px;
+  }
 
+  .ambiente-container a {
     width: 100%;
   }
 
   .ambiente-box {
+    width: 100%;
+
     height: 120px;
 
     padding: 7px 5px;
+
+    border: 2px solid #2e3192;
 
     border-radius: 0 38px 16px 38px;
 
     box-shadow: 4px 4px 0 #2e3192;
   }
 
+  /* Ícones */
+
   .ambiente-box img {
     width: 28px;
+    height: auto;
+
     margin-bottom: 4px;
   }
 
+  /* Nome do módulo */
+
   .ambiente-box h3 {
     font-size: 0.72rem;
+
+    line-height: 1.2;
+
     margin-bottom: 2px;
   }
 
+  /* Descrição */
+
   .ambiente-box p {
     font-size: 0.57rem;
+
     line-height: 1.2;
   }
 
+  /* ======================================
+     RODAPÉ MOBILE
+  ====================================== */
+
   footer {
-  margin-top: auto;
-  position: fixed; /* Mantém o footer fixo no final da página */
+    position: static;
+
+    width: 100%;
+
+    margin-top: auto;
+  }
+
+  .copyright p {
+    font-size: 0.68rem;
+
+    padding: 8px 6px;
+  }
 }
 
-.copyright p {
-  font-size: 0.68rem;
-  padding: 8px 6px;
-  position: relative;
-  
-}
-}
-
-/* =========================
-   CELULAR PEQUENO
-========================= */
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
 
 @media screen and (max-width: 390px) {
+
+  /* Cabeçalho */
 
   .menu-desktop h2 {
     font-size: 1rem;
@@ -384,7 +755,28 @@ letter-spacing: 1px; /* background-image: linear-gradient(45deg, #2e3192, #5b0a0
   .menu-links button {
     width: 68px;
     height: 30px;
+
     font-size: 0.78rem;
+  }
+
+  /* Título */
+
+  .titulo-sessao img {
+    width: 78px;
+  }
+
+  .pagina-inicial .titulo-sessao h2 {
+    font-size: 1.05rem;
+  }
+
+  .pagina-inicial .titulo-sessao p {
+    font-size: 0.68rem;
+  }
+
+  /* Cards */
+
+  .ambiente-container {
+    gap: 12px;
   }
 
   .ambiente-box {
@@ -401,5 +793,76 @@ letter-spacing: 1px; /* background-image: linear-gradient(45deg, #2e3192, #5b0a0
 
   .ambiente-box p {
     font-size: 0.53rem;
+  }
+}
+
+/* ==========================================
+   CELULARES COM TELA BAIXA
+========================================== */
+
+@media screen and (max-width: 650px) and (max-height: 700px) {
+
+  /* Reduzir espaços verticais */
+
+  .header-content {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    gap: 5px;
+  }
+
+  .logotipo img {
+    width: 55px;
+  }
+
+  .menu-desktop {
+    gap: 6px;
+  }
+
+  .menu-desktop h2 {
+    font-size: 1rem;
+  }
+
+  /* Conteúdo */
+
+  section.pagina-inicial {
+    padding: 8px 0;
+  }
+
+  .titulo-sessao {
+    margin-bottom: 10px;
+  }
+
+  .titulo-sessao img {
+    width: 65px;
+  }
+
+  .pagina-inicial .titulo-sessao h2 {
+    font-size: 1rem;
+  }
+
+  .pagina-inicial .titulo-sessao p {
+    font-size: 0.65rem;
+  }
+
+  /* Cards */
+
+  .ambiente-container {
+    gap: 10px;
+  }
+
+  .ambiente-box {
+    height: 105px;
+  }
+
+  .ambiente-box img {
+    width: 24px;
+  }
+
+  /* Rodapé */
+
+  .copyright p {
+    font-size: 0.6rem;
+    padding: 5px;
   }
 }
