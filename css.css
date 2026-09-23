@@ -23,10 +23,13 @@ body {
   background-color: #f8f9fa;
 }
 
-/* Estrutura principal da página */
+/* ==========================================
+   ESTRUTURA PRINCIPAL
+========================================== */
 
 .container {
   width: 100%;
+
   min-height: 100vh;
   min-height: 100dvh;
 
@@ -34,11 +37,10 @@ body {
   flex-direction: column;
 }
 
-/* Limite de largura do conteúdo */
-
 .interface {
   width: 100%;
   max-width: 1080px;
+
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -49,16 +51,14 @@ body {
 
 header {
   width: 100%;
+
   background-color: #262870;
 
   flex-shrink: 0;
 }
 
-/* Organização horizontal */
-
 .header-content {
   height: 90px;
-  min-height: 0;
 
   display: flex;
   align-items: center;
@@ -105,8 +105,6 @@ header {
   gap: 20px;
 }
 
-/* Título do cabeçalho */
-
 .menu-desktop h2 {
   color: #fff;
 
@@ -118,7 +116,7 @@ header {
   flex: 1;
 }
 
-/* Links do menu */
+/* Links */
 
 .menu-links {
   display: flex;
@@ -183,8 +181,6 @@ section.pagina-inicial {
   padding: 10px 0;
 }
 
-/* Interface dentro da página inicial */
-
 .pagina-inicial > .interface {
   width: 100%;
 }
@@ -226,7 +222,7 @@ section.pagina-inicial {
   margin-bottom: 4px;
 }
 
-/* Frase de apresentação */
+/* Frase */
 
 .pagina-inicial .titulo-sessao p {
   color: #2e3192;
@@ -257,8 +253,6 @@ section.pagina-inicial {
   align-items: stretch;
 }
 
-/* Links dos cards */
-
 .ambiente-container a {
   display: block;
 
@@ -270,7 +264,7 @@ section.pagina-inicial {
 }
 
 /* ==========================================
-   ESTILO DOS CARDS
+   CARDS
 ========================================== */
 
 .ambiente-box {
@@ -328,7 +322,7 @@ section.pagina-inicial {
   margin-bottom: 4px;
 }
 
-/* Descrição do módulo */
+/* Descrição */
 
 .ambiente-box p {
   color: #2e3192;
@@ -342,7 +336,7 @@ section.pagina-inicial {
 }
 
 /* ==========================================
-   RODAPÉ
+   RODAPÉ FINO
 ========================================== */
 
 footer {
@@ -353,6 +347,8 @@ footer {
   flex-shrink: 0;
 
   position: static;
+
+  background-color: #262870;
 }
 
 .copyright {
@@ -362,9 +358,8 @@ footer {
 .copyright p {
   width: 100%;
 
-  background-color: #262870;
-
   color: #fff;
+  background-color: transparent;
 
   text-align: center;
 
@@ -372,8 +367,9 @@ footer {
 
   letter-spacing: 1px;
 
-  padding: 4px 10px;
+  line-height: 20px;
 
+  padding: 0;
   margin: 0;
 }
 
@@ -432,12 +428,6 @@ footer {
   .ambiente-box img {
     width: 36px;
     margin-bottom: 5px;
-  }
-
-  /* Rodapé */
-
-  .copyright p {
-    padding: 3px 10px;
   }
 }
 
@@ -552,7 +542,6 @@ footer {
   .logotipo img {
     width: 70px;
     max-width: 70px;
-
     height: auto;
   }
 
@@ -571,7 +560,7 @@ footer {
     gap: 10px;
   }
 
-  /* Ambiente de Aprendizado */
+  /* Título */
 
   .menu-desktop h2 {
     font-size: 1.15rem;
@@ -714,7 +703,7 @@ footer {
   }
 
   /* ======================================
-     RODAPÉ MOBILE
+     RODAPÉ FINO MOBILE
   ====================================== */
 
   footer {
@@ -728,7 +717,9 @@ footer {
   .copyright p {
     font-size: 0.68rem;
 
-    padding: 8px 6px;
+    line-height: 20px;
+
+    padding: 0;
   }
 }
 
@@ -802,7 +793,7 @@ footer {
 
 @media screen and (max-width: 650px) and (max-height: 700px) {
 
-  /* Reduzir espaços verticais */
+  /* Cabeçalho */
 
   .header-content {
     padding-top: 8px;
@@ -863,6 +854,7 @@ footer {
 
   .copyright p {
     font-size: 0.6rem;
-    padding: 5px;
+    line-height: 20px;
+    padding: 0;
   }
 }
