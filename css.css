@@ -44,6 +44,7 @@ header {
 
 .logotipo {
   width: 150px;
+  height: 130px
 
   display: flex;
   align-items: center;
