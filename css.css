@@ -32,10 +32,12 @@ body {
 
 header {
   background-color: #262870;
+  flex-shrink: 0;
 }
 
 .header-content {
-  min-height: 100px;
+  height: 90px;
+  min-height: 0;
 
   display: flex;
   align-items: center;
@@ -44,7 +46,7 @@ header {
 
 .logotipo {
   width: 150px;
-  height: 130px
+  height: 90px;
 
   display: flex;
   align-items: center;
@@ -53,7 +55,8 @@ header {
 
 .logotipo img {
   width: 100%;
-  max-width: 170px;
+  max-width: 140px;
+  height: auto;
   display: block;
 }
 
