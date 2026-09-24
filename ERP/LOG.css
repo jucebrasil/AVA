@@ -92,6 +92,21 @@ article.logotipo {
   gap: 20px;
 }
 
+.menu-desktop ul {
+  width: 100%;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 25px;
+}
+
+.menu-desktop ul li {
+  list-style: none;
+}
+
 .menu-desktop h2 {
   color: #fff;
 
@@ -114,25 +129,8 @@ article.logotipo {
   margin: 0;
 }
 
-.menu-desktop ul {
-  width: 100%;
-
-  list-style: none;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  gap: 25px;
-}
-
-.menu-desktop ul li {
-  list-style: none;
-}
-
 .menu-desktop ul li a {
   color: #fff;
-
   text-decoration: none;
 }
 
@@ -159,7 +157,6 @@ article.logotipo {
 ========================================== */
 
 @media screen and (min-width: 651px) {
-
   .menu-desktop ul li:first-child {
     position: absolute;
 
@@ -219,7 +216,7 @@ section.pagina-inicial {
 
 /* ==========================================
    CONTAINER DOS BOTÕES
-   DESKTOP = 6 COLUNAS
+   DESKTOP - 6 COLUNAS
 ========================================== */
 
 article.ambiente-container {
@@ -243,7 +240,7 @@ article.ambiente-container {
 
 /* ==========================================
    BOTÕES
-   COMPACTOS COMO NO ATIVO.COM
+   COMPACTOS COMO ATIVO.COM
 ========================================== */
 
 .glow-on-hover {
@@ -276,7 +273,15 @@ article.ambiente-container {
 
   cursor: pointer;
 
-  overflow-wrap: anywhere;
+  /*
+     IMPORTANTE:
+     não usamos overflow-wrap:anywhere
+     para não cortar CONFIGURAÇÃO,
+     GEOLOCALIZAÇÃO, ARCHITECT etc.
+  */
+
+  word-break: normal;
+  overflow-wrap: normal;
 
   box-shadow:
     0 8px 16px rgba(46, 49, 146, 0.3),
@@ -289,12 +294,48 @@ article.ambiente-container {
   transform: translateY(-3px);
 }
 
+/* ==========================================
+   TEXTO DOS BOTÕES
+========================================== */
+
 .glow-on-hover p {
+  width: 100%;
+
   font-size: inherit;
+  font-weight: inherit;
   line-height: inherit;
+
   color: inherit;
 
   text-align: center;
+
+  margin: 0;
+
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* ==========================================
+   SPAN DOS BOTÕES
+========================================== */
+
+.glow-on-hover span {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 2px;
+
+  font-size: 0.58rem;
+  font-weight: 500;
+  line-height: 1.15;
+
+  color: inherit;
+
+  text-align: center;
+
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 /* ==========================================
@@ -371,7 +412,6 @@ article.ambiente-container {
 ========================================== */
 
 @keyframes glowing {
-
   0% {
     background-position: 0 0;
   }
@@ -414,7 +454,6 @@ footer {
   line-height: 20px;
 
   margin: 0;
-
   padding: 0 8px;
 }
 
@@ -459,6 +498,10 @@ footer {
 
     font-size: 0.75rem;
   }
+
+  .glow-on-hover span {
+    font-size: 0.65rem;
+  }
 }
 
 /* ==========================================
@@ -500,7 +543,6 @@ footer {
     justify-content: center;
 
     margin: 0;
-
     padding: 0;
   }
 
@@ -624,7 +666,6 @@ footer {
     width: 100%;
 
     min-width: 0;
-
     min-height: 75px;
     height: auto;
 
@@ -635,7 +676,16 @@ footer {
 
     border-radius: 12px;
 
-    overflow-wrap: anywhere;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .glow-on-hover span {
+    font-size: 0.68rem;
+
+    line-height: 1.2;
+
+    margin-top: 3px;
   }
 
   .glow-on-hover::before,
@@ -644,7 +694,7 @@ footer {
   }
 
   /* ======================================
-     RODAPÉ MOBILE
+     RODAPÉ
   ====================================== */
 
   .copyright {
@@ -691,6 +741,10 @@ footer {
 
     font-size: 0.72rem;
   }
+
+  .glow-on-hover span {
+    font-size: 0.62rem;
+  }
 }
 
 /* ==========================================
@@ -702,7 +756,6 @@ footer {
   .glow-on-hover,
   .glow-on-hover::before {
     animation: none;
-
     transition: none;
   }
 }
