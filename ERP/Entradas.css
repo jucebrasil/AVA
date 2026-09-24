@@ -803,3 +803,31 @@ footer {
     transition: none;
   }
 }
+/* =========================================================
+   AJUSTE ESPECÍFICO - ENTRADAS
+   PÁGINA COM 2 BOTÕES
+========================================================= */
+
+body.pagina-dois-botoes article.ambiente-container {
+  width: fit-content;
+  max-width: none;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 150px);
+
+  gap: 18px;
+
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.pagina-dois-botoes .ambiente-container > a {
+  width: 150px;
+}
+
+body.pagina-dois-botoes .glow-on-hover {
+  width: 150px;
+}
