@@ -276,7 +276,7 @@ article.ambiente-container {
 
   display: grid;
 
-  grid-template-columns: repeat(5, 180px);
+  grid-template-columns: repeat(6, 180px);
 
   gap: 20px;
 
