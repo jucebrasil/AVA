@@ -20,12 +20,9 @@ body {
 body {
   min-height: 100vh;
   min-height: 100dvh;
-
   display: flex;
   flex-direction: column;
-
   background-color: #fff;
-
   overflow-x: hidden;
 }
 
@@ -36,9 +33,7 @@ body {
 .interface {
   width: 100%;
   max-width: 1120px;
-
   margin: 0 auto;
-
   padding: 0 20px;
 }
 
@@ -48,20 +43,16 @@ body {
 
 header {
   width: 100%;
-  height: 100px;
-
+  height: 95px;
   background-color: #262870;
-
   flex-shrink: 0;
 }
 
 header .interface {
   height: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 20px;
 }
 
@@ -70,22 +61,18 @@ header .interface {
 ========================================================= */
 
 article.logotipo {
-  width: 150px;
+  width: 145px;
   height: 100%;
-
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
   flex-shrink: 0;
 }
 
 .logotipo img {
   width: 100%;
-  max-width: 130px;
-
+  max-width: 125px;
   height: auto;
-
   display: block;
 }
 
@@ -96,23 +83,18 @@ article.logotipo {
 .menu-desktop {
   flex: 1;
   min-width: 0;
-
   height: 100%;
-
   display: flex;
   align-items: center;
 }
 
 .menu-desktop ul {
   width: 100%;
-
   list-style: none;
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-  gap: 25px;
+  gap: 22px;
 }
 
 .menu-desktop ul li {
@@ -122,52 +104,36 @@ article.logotipo {
 }
 
 /* título do sistema */
-
 .menu-desktop ul li:first-child {
   flex: 1;
 }
 
 .menu-desktop h2 {
   color: #fff;
-
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 400;
-
   text-align: center;
-
   margin: 0;
 }
 
 /* links */
-
 .menu-desktop ul li a {
   color: #fff;
-
   text-decoration: none;
-
-  font-size: 1rem;
-
+  font-size: 0.95rem;
   white-space: nowrap;
 }
 
 /* botão site */
-
 .menu-desktop ul li a button {
-  width: 80px;
-  height: 34px;
-
+  width: 78px;
+  height: 32px;
   background-color: transparent;
-
   border: 2px solid #fff;
-
   border-radius: 10px;
-
   color: #fff;
-
-  font-size: 0.9rem;
-
+  font-size: 0.88rem;
   cursor: pointer;
-
   transition: 0.3s;
 }
 
@@ -182,11 +148,8 @@ article.logotipo {
 
 section.pagina-inicial {
   width: 100%;
-
   flex: 1;
-
-  padding: 20px 20px 45px;
-
+  padding: 14px 20px 28px;
   text-align: center;
 }
 
@@ -197,32 +160,23 @@ section.pagina-inicial {
 .pagina-inicial .titulo-sessao {
   width: 100%;
   max-width: 1000px;
-
-  margin: 0 auto 22px;
-
+  margin: 0 auto 16px;
   text-align: center;
 }
 
 .pagina-inicial .titulo-sessao h2 {
   color: #2e3192;
-
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 600;
-
-  padding: 5px 0;
-
-  margin-bottom: 8px;
+  padding: 0;
+  margin-bottom: 6px;
 }
 
 .pagina-inicial .titulo-sessao p {
   color: #2e3192;
-
-  font-size: 1rem;
-
-  line-height: 1.5;
-
+  font-size: 0.95rem;
+  line-height: 1.45;
   padding: 0;
-
   text-align: center;
 }
 
@@ -237,25 +191,17 @@ section.pagina-inicial {
 article.ambiente-container {
   width: 100%;
   max-width: 1050px;
-
   margin: 0 auto;
-
   display: grid;
-
   grid-template-columns: repeat(5, minmax(0, 1fr));
-
-  gap: 14px;
-
+  gap: 12px;
   align-items: stretch;
 }
 
 /* link de cada botão */
-
 .ambiente-container > a {
   width: 100%;
-
   display: block;
-
   text-decoration: none;
 }
 
@@ -265,50 +211,29 @@ article.ambiente-container {
 
 .glow-on-hover {
   width: 100%;
-
-  min-height: 62px;
+  min-height: 54px;
   height: 100%;
-
-  padding: 8px 7px;
-
+  padding: 6px 6px;
   border: none;
-
   outline: none;
-
   color: #fff;
-
   background-color: #262870;
-
   cursor: pointer;
-
   position: relative;
-
   z-index: 0;
-
   border-radius: 10px;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: center;
-
-  font-size: 0.72rem;
-
+  font-size: 0.66rem;
   font-weight: 600;
-
-  line-height: 1.25;
-
+  line-height: 1.2;
   overflow-wrap: anywhere;
-
   box-shadow:
-    0 8px 16px rgba(46, 49, 146, 0.35),
-    0 6px 20px rgba(46, 49, 146, 0.22);
-
+    0 7px 14px rgba(46, 49, 146, 0.28),
+    0 5px 16px rgba(46, 49, 146, 0.18);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -318,17 +243,11 @@ article.ambiente-container {
   transform: translateY(-2px);
 }
 
-/* texto menor */
-
 .glow-on-hover span {
   display: block;
-
   margin-top: 2px;
-
-  font-size: 0.55rem;
-
-  line-height: 1.15;
-
+  font-size: 0.5rem;
+  line-height: 1.1;
   font-weight: 500;
 }
 
@@ -338,7 +257,6 @@ article.ambiente-container {
 
 .glow-on-hover::before {
   content: "";
-
   background: linear-gradient(
     45deg,
     #ff0000,
@@ -351,27 +269,17 @@ article.ambiente-container {
     #ff00c8,
     #e30000
   );
-
   position: absolute;
-
   top: -2px;
   left: -2px;
-
   background-size: 400%;
-
   z-index: -1;
-
   filter: blur(5px);
-
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-
   animation: glowing 20s linear infinite;
-
   opacity: 0;
-
   transition: opacity 0.3s ease-in-out;
-
   border-radius: 10px;
 }
 
@@ -381,19 +289,13 @@ article.ambiente-container {
 
 .glow-on-hover::after {
   content: "";
-
   position: absolute;
-
   left: 0;
   top: 0;
-
   width: 100%;
   height: 100%;
-
   background-color: #262870;
-
   z-index: -1;
-
   border-radius: 10px;
 }
 
@@ -402,7 +304,6 @@ article.ambiente-container {
 }
 
 /* animação */
-
 @keyframes glowing {
   0% {
     background-position: 0 0;
@@ -423,11 +324,8 @@ article.ambiente-container {
 
 footer {
   width: 100%;
-
   margin-top: auto;
-
   background-color: #262870;
-
   flex-shrink: 0;
 }
 
@@ -437,19 +335,12 @@ footer {
 
 .copyright p {
   width: 100%;
-
   margin: 0;
-
   color: #fff;
-
   background-color: #262870;
-
   text-align: center;
-
   font-size: 0.68rem;
-
   letter-spacing: 1px;
-
   line-height: 20px;
 }
 
@@ -458,35 +349,27 @@ footer {
 ========================================================= */
 
 @media screen and (max-width: 1050px) {
-
-  /* cabeçalho */
-
   .menu-desktop ul {
-    gap: 15px;
-  }
-
-  .menu-desktop h2 {
-    font-size: 1.25rem;
-  }
-
-  .menu-desktop ul li a {
-    font-size: 0.85rem;
-  }
-
-  /* botões */
-
-  article.ambiente-container {
-    max-width: 760px;
-
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-
     gap: 14px;
   }
 
-  .glow-on-hover {
-    min-height: 65px;
+  .menu-desktop h2 {
+    font-size: 1.2rem;
+  }
 
-    font-size: 0.75rem;
+  .menu-desktop ul li a {
+    font-size: 0.82rem;
+  }
+
+  article.ambiente-container {
+    max-width: 760px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .glow-on-hover {
+    min-height: 58px;
+    font-size: 0.68rem;
   }
 }
 
@@ -495,54 +378,36 @@ footer {
 ========================================================= */
 
 @media screen and (max-width: 650px) {
-
-  /* =====================================================
-     HEADER
-  ===================================================== */
-
   header {
     height: auto;
   }
 
   header .interface {
     height: auto;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 10px;
-
     padding: 12px 15px 16px;
   }
 
   /* LOGO */
-
   article.logotipo {
     width: 100%;
     height: auto;
-
     display: flex;
-
     justify-content: center;
-
     margin: 0;
-
     padding: 0;
   }
 
   .logotipo img {
     width: 75px;
-
     max-width: 75px;
   }
 
   /* MENU */
-
   .menu-desktop {
     width: 100%;
     height: auto;
@@ -550,107 +415,72 @@ footer {
 
   .menu-desktop ul {
     width: 100%;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr 80px;
-
     gap: 8px;
-
     align-items: center;
   }
 
-  /* título ocupa a linha inteira */
-
   .menu-desktop ul li:first-child {
     grid-column: 1 / -1;
-
     width: 100%;
   }
 
   .menu-desktop h2 {
     font-size: 1.25rem;
-
     line-height: 1.3;
-
     margin-bottom: 5px;
   }
 
-  /* links */
-
   .menu-desktop ul li {
     width: 100%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
   }
 
   .menu-desktop ul li a {
     font-size: 0.82rem;
-
     text-align: center;
   }
 
   .menu-desktop ul li a button {
     width: 75px;
-
     height: 32px;
-
     font-size: 0.8rem;
   }
 
-  /* =====================================================
-     CONTEÚDO
-  ===================================================== */
-
+  /* CONTEÚDO */
   section.pagina-inicial {
     padding: 18px 12px 30px;
   }
 
   .pagina-inicial .titulo-sessao {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .pagina-inicial .titulo-sessao h2 {
     font-size: 1.3rem;
-
     padding: 0;
-
     margin-bottom: 10px;
   }
 
   .pagina-inicial .titulo-sessao p {
     width: 100%;
-
     max-width: 100%;
-
     padding: 0 6px;
-
     font-size: 0.82rem;
-
     line-height: 1.45;
-
     text-align: center;
   }
 
-  /* =====================================================
-     BOTÕES
-  ===================================================== */
-
+  /* BOTÕES */
   article.ambiente-container {
     width: 100%;
-
     max-width: 380px;
-
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 12px;
-
     margin: 0 auto;
   }
 
@@ -660,29 +490,21 @@ footer {
 
   .glow-on-hover {
     width: 100%;
-
     min-height: 72px;
-
     padding: 9px 6px;
-
     font-size: 0.72rem;
-
     line-height: 1.25;
-
     border-radius: 10px;
   }
 
   .glow-on-hover span {
     font-size: 0.53rem;
-
     line-height: 1.15;
   }
 
   /* Rodapé */
-
   .copyright p {
     font-size: 0.62rem;
-
     line-height: 20px;
   }
 }
@@ -692,10 +514,8 @@ footer {
 ========================================================= */
 
 @media screen and (max-width: 390px) {
-
   .menu-desktop ul {
     grid-template-columns: 1fr 1fr 70px;
-
     gap: 6px;
   }
 
@@ -709,9 +529,7 @@ footer {
 
   .menu-desktop ul li a button {
     width: 65px;
-
     height: 30px;
-
     font-size: 0.73rem;
   }
 
@@ -728,10 +546,8 @@ footer {
   }
 
   .glow-on-hover {
-    min-height: 70px;
-
+    min-height: 68px;
     padding: 8px 5px;
-
     font-size: 0.67rem;
   }
 
@@ -745,11 +561,9 @@ footer {
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   .glow-on-hover,
   .glow-on-hover::before {
     animation: none;
-
     transition: none;
   }
 }
