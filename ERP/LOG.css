@@ -217,7 +217,7 @@ section.pagina-inicial {
 
 /* ==========================================
    CONTAINER DOS BOTÕES
-   DESKTOP - 6 COLUNAS
+   6 COLUNAS NO DESKTOP
 ========================================== */
 
 article.ambiente-container {
@@ -253,11 +253,6 @@ article.ambiente-container {
   padding: 6px 7px;
 
   display: flex;
-
-  /* TEXTO PRINCIPAL EM CIMA
-     E SPAN EMBAIXO */
-  flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
@@ -278,9 +273,6 @@ article.ambiente-container {
 
   cursor: pointer;
 
-  word-break: normal;
-  overflow-wrap: normal;
-
   box-shadow:
     0 8px 16px rgba(46, 49, 146, 0.3),
     0 6px 20px rgba(46, 49, 146, 0.2);
@@ -288,12 +280,22 @@ article.ambiente-container {
   transition: transform 0.3s;
 }
 
-.glow-on-hover:hover {
-  transform: translateY(-3px);
+/* ==========================================
+   LINKS DOS CARDS
+   SEM ROXO / AZUL / SUBLINHADO
+========================================== */
+
+.ambiente-container a,
+.ambiente-container a:link,
+.ambiente-container a:visited,
+.ambiente-container a:hover,
+.ambiente-container a:active {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* ==========================================
-   TEXTO PRINCIPAL DOS BOTÕES
+   CONTEÚDO INTERNO DO BOTÃO
 ========================================== */
 
 .glow-on-hover p {
@@ -301,39 +303,64 @@ article.ambiente-container {
 
   margin: 0;
 
+  color: #fff;
+
   font-size: inherit;
   font-weight: inherit;
-  line-height: inherit;
-
-  color: inherit;
+  line-height: 1.2;
 
   text-align: center;
-
-  word-break: normal;
-  overflow-wrap: normal;
 }
 
 /* ==========================================
-   SPAN - SEMPRE ABAIXO
+   SPAN
+   SEMPRE ABAIXO E CENTRALIZADO
 ========================================== */
 
-.glow-on-hover span {
+.glow-on-hover p span {
   display: block;
 
   width: 100%;
 
   margin-top: 2px;
 
+  color: #fff;
+
   font-size: 0.58rem;
   font-weight: 500;
-  line-height: 1.15;
-
-  color: inherit;
+  line-height: 1.1;
 
   text-align: center;
 
-  word-break: normal;
-  overflow-wrap: normal;
+  white-space: normal;
+}
+
+/* CASO O SPAN ESTEJA DIRETO NO BUTTON */
+
+.glow-on-hover > span {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 2px;
+
+  color: #fff;
+
+  font-size: 0.58rem;
+  font-weight: 500;
+  line-height: 1.1;
+
+  text-align: center;
+
+  white-space: normal;
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.glow-on-hover:hover {
+  transform: translateY(-3px);
 }
 
 /* ==========================================
@@ -425,7 +452,7 @@ article.ambiente-container {
 }
 
 /* ==========================================
-   RODAPÉ FINO
+   RODAPÉ
 ========================================== */
 
 footer {
@@ -463,8 +490,6 @@ footer {
 
 @media screen and (max-width: 1050px) {
 
-  /* CABEÇALHO */
-
   header .interface {
     padding: 15px 20px;
   }
@@ -477,9 +502,7 @@ footer {
     font-size: 1rem;
   }
 
-  /* ======================================
-     BOTÕES TABLET - 3 COLUNAS
-  ====================================== */
+  /* 3 COLUNAS */
 
   article.ambiente-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -498,7 +521,8 @@ footer {
     font-size: 0.75rem;
   }
 
-  .glow-on-hover span {
+  .glow-on-hover p span,
+  .glow-on-hover > span {
     font-size: 0.65rem;
   }
 }
@@ -531,9 +555,7 @@ footer {
     padding: 12px 15px 16px;
   }
 
-  /* ======================================
-     LOGOTIPO MOBILE
-  ====================================== */
+  /* LOGOTIPO */
 
   article.logotipo {
     width: 100%;
@@ -550,9 +572,7 @@ footer {
     max-width: 75px;
   }
 
-  /* ======================================
-     MENU MOBILE
-  ====================================== */
+  /* MENU */
 
   .menu-desktop {
     width: 100%;
@@ -606,7 +626,7 @@ footer {
   }
 
   /* ======================================
-     TÍTULO E TEXTO
+     TÍTULO
   ====================================== */
 
   section.pagina-inicial {
@@ -642,7 +662,7 @@ footer {
   }
 
   /* ======================================
-     BOTÕES MOBILE - DUAS COLUNAS
+     BOTÕES - 2 COLUNAS
   ====================================== */
 
   article.ambiente-container {
@@ -664,35 +684,25 @@ footer {
     width: 100%;
 
     min-width: 0;
-
     min-height: 75px;
+
     height: auto;
 
     padding: 12px 8px;
-
-    /* MANTÉM O SPAN ABAIXO NO CELULAR */
-    flex-direction: column;
 
     font-size: 0.78rem;
     line-height: 1.35;
 
     border-radius: 12px;
-
-    word-break: normal;
-    overflow-wrap: normal;
   }
 
-  .glow-on-hover span {
-    display: block;
-
-    width: 100%;
-
+  .glow-on-hover p span,
+  .glow-on-hover > span {
     margin-top: 3px;
 
     font-size: 0.68rem;
-    line-height: 1.2;
 
-    text-align: center;
+    line-height: 1.2;
   }
 
   .glow-on-hover::before,
@@ -700,9 +710,7 @@ footer {
     border-radius: 12px;
   }
 
-  /* ======================================
-     RODAPÉ MOBILE
-  ====================================== */
+  /* RODAPÉ */
 
   .copyright {
     position: static;
@@ -749,7 +757,8 @@ footer {
     font-size: 0.72rem;
   }
 
-  .glow-on-hover span {
+  .glow-on-hover p span,
+  .glow-on-hover > span {
     font-size: 0.62rem;
   }
 }
