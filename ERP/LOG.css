@@ -285,7 +285,7 @@ article.ambiente-container {
 
   display: grid;
 
-  grid-template-columns: repeat(6, 170px);
+  grid-template-columns: repeat(6, 150px);
 
   justify-content: center;
 
@@ -295,7 +295,7 @@ article.ambiente-container {
 }
 
 .ambiente-container > a {
-  width: 170px;
+  width: 150px;
 
   display: block;
 
@@ -307,7 +307,7 @@ article.ambiente-container {
 ========================================================= */
 
 .glow-on-hover {
-  width: 145px;
+  width: 150px;
 
   min-height: 40px;
 
