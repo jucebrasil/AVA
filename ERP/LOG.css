@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* ==========================================
+/* =========================================================
    CONFIGURAÇÕES GERAIS
-========================================== */
+========================================================= */
 
 * {
   margin: 0;
@@ -20,80 +20,92 @@ body {
 body {
   min-height: 100vh;
   min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+
   background-color: #fff;
+
+  overflow-x: hidden;
 }
 
-/* ==========================================
+/* =========================================================
    INTERFACE
-========================================== */
+========================================================= */
 
 .interface {
   width: 100%;
   max-width: 1120px;
+
   margin: 0 auto;
+
   padding: 0 20px;
 }
 
-/* ==========================================
+/* =========================================================
    CABEÇALHO
-========================================== */
+========================================================= */
 
 header {
   width: 100%;
-  min-height: 100px;
+  height: 100px;
+
   background-color: #262870;
+
+  flex-shrink: 0;
 }
 
 header .interface {
-  min-height: 100px;
+  height: 100%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   gap: 20px;
-
-  position: relative;
 }
 
-/* ==========================================
+/* =========================================================
    LOGOTIPO
-========================================== */
+========================================================= */
 
 article.logotipo {
   width: 150px;
-  flex-shrink: 0;
+  height: 100%;
 
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  flex-shrink: 0;
 }
 
 .logotipo img {
   width: 100%;
   max-width: 130px;
+
   height: auto;
 
   display: block;
 }
 
-/* ==========================================
-   MENU
-========================================== */
+/* =========================================================
+   MENU DESKTOP
+========================================================= */
 
 .menu-desktop {
   flex: 1;
   min-width: 0;
 
+  height: 100%;
+
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-
-  gap: 20px;
 }
 
 .menu-desktop ul {
   width: 100%;
+
   list-style: none;
 
   display: flex;
@@ -104,7 +116,15 @@ article.logotipo {
 }
 
 .menu-desktop ul li {
-  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* título do sistema */
+
+.menu-desktop ul li:first-child {
+  flex: 1;
 }
 
 .menu-desktop h2 {
@@ -118,31 +138,28 @@ article.logotipo {
   margin: 0;
 }
 
-.menu-desktop h3 {
-  color: #fff;
-
-  font-size: 1.2rem;
-  font-weight: 400;
-
-  text-align: center;
-
-  margin: 0;
-}
+/* links */
 
 .menu-desktop ul li a {
   color: #fff;
+
   text-decoration: none;
+
+  font-size: 1rem;
+
+  white-space: nowrap;
 }
 
-.menu-desktop ul li a button {
-  min-width: 85px;
-  height: 35px;
+/* botão site */
 
-  padding: 0 12px;
+.menu-desktop ul li a button {
+  width: 80px;
+  height: 34px;
 
   background-color: transparent;
 
   border: 2px solid #fff;
+
   border-radius: 10px;
 
   color: #fff;
@@ -150,45 +167,38 @@ article.logotipo {
   font-size: 0.9rem;
 
   cursor: pointer;
+
+  transition: 0.3s;
 }
 
-/* ==========================================
-   TÍTULO CENTRALIZADO NO DESKTOP
-========================================== */
-
-@media screen and (min-width: 651px) {
-
-  .menu-desktop ul li:first-child {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-  }
+.menu-desktop ul li a button:hover {
+  background-color: #fff;
+  color: #262870;
 }
 
-/* ==========================================
-   PÁGINA INICIAL
-========================================== */
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
 
 section.pagina-inicial {
   width: 100%;
 
-  padding: 25px 15px 50px;
+  flex: 1;
+
+  padding: 20px 20px 45px;
 
   text-align: center;
 }
 
-/* ==========================================
-   TÍTULO E APRESENTAÇÃO
-========================================== */
+/* =========================================================
+   TÍTULO
+========================================================= */
 
 .pagina-inicial .titulo-sessao {
   width: 100%;
   max-width: 1000px;
 
-  margin: 0 auto 20px;
+  margin: 0 auto 22px;
 
   text-align: center;
 }
@@ -196,187 +206,138 @@ section.pagina-inicial {
 .pagina-inicial .titulo-sessao h2 {
   color: #2e3192;
 
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
 
-  margin-bottom: 15px;
+  padding: 5px 0;
 
-  text-align: center;
+  margin-bottom: 8px;
 }
 
 .pagina-inicial .titulo-sessao p {
   color: #2e3192;
 
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+
+  line-height: 1.5;
+
+  padding: 0;
 
   text-align: center;
-
-  overflow-wrap: break-word;
 }
 
-/* ==========================================
+.pagina-inicial .titulo-sessao b {
+  font-weight: 700;
+}
+
+/* =========================================================
    CONTAINER DOS BOTÕES
-   6 COLUNAS NO DESKTOP
-========================================== */
+========================================================= */
 
 article.ambiente-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1050px;
 
   margin: 0 auto;
 
   display: grid;
 
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 
-  column-gap: 14px;
-  row-gap: 10px;
+  gap: 14px;
 
   align-items: stretch;
-  justify-items: stretch;
-
-  text-align: center;
 }
 
-/* ==========================================
-   BOTÕES
-========================================== */
+/* link de cada botão */
 
-.glow-on-hover {
+.ambiente-container > a {
   width: 100%;
-  min-width: 0;
 
-  min-height: 40px;
-  height: auto;
+  display: block;
 
-  padding: 6px 7px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-  z-index: 0;
-
-  border: none;
-  border-radius: 10px;
-
-  background-color: #262870;
-  color: #fff;
-
-  font-size: 0.68rem;
-  font-weight: 600;
-  line-height: 1.25;
-
-  text-align: center;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 8px 16px rgba(46, 49, 146, 0.3),
-    0 6px 20px rgba(46, 49, 146, 0.2);
-
-  transition: transform 0.3s;
-}
-
-/* ==========================================
-   LINKS DOS CARDS
-   SEM ROXO / AZUL / SUBLINHADO
-========================================== */
-
-.ambiente-container a,
-.ambiente-container a:link,
-.ambiente-container a:visited,
-.ambiente-container a:hover,
-.ambiente-container a:active {
-  color: #fff;
   text-decoration: none;
 }
 
-/* ==========================================
-   CONTEÚDO INTERNO DO BOTÃO
-========================================== */
+/* =========================================================
+   BOTÕES
+========================================================= */
 
-.glow-on-hover p {
+.glow-on-hover {
   width: 100%;
 
-  margin: 0;
+  min-height: 62px;
+  height: 100%;
+
+  padding: 8px 7px;
+
+  border: none;
+
+  outline: none;
 
   color: #fff;
 
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: 1.2;
+  background-color: #262870;
 
-  text-align: center;
-}
+  cursor: pointer;
 
-/* ==========================================
-   SPAN
-   SEMPRE ABAIXO E CENTRALIZADO
-========================================== */
+  position: relative;
 
-.glow-on-hover p span {
-  display: block;
+  z-index: 0;
 
-  width: 100%;
+  border-radius: 10px;
 
-  margin-top: 2px;
+  display: flex;
 
-  color: #fff;
+  flex-direction: column;
 
-  font-size: 0.58rem;
-  font-weight: 500;
-  line-height: 1.1;
+  align-items: center;
+
+  justify-content: center;
 
   text-align: center;
 
-  white-space: normal;
+  font-size: 0.72rem;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  overflow-wrap: anywhere;
+
+  box-shadow:
+    0 8px 16px rgba(46, 49, 146, 0.35),
+    0 6px 20px rgba(46, 49, 146, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-
-/* CASO O SPAN ESTEJA DIRETO NO BUTTON */
-
-.glow-on-hover > span {
-  display: block;
-
-  width: 100%;
-
-  margin-top: 2px;
-
-  color: #fff;
-
-  font-size: 0.58rem;
-  font-weight: 500;
-  line-height: 1.1;
-
-  text-align: center;
-
-  white-space: normal;
-}
-
-/* ==========================================
-   HOVER
-========================================== */
 
 .glow-on-hover:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
-/* ==========================================
+/* texto menor */
+
+.glow-on-hover span {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 0.55rem;
+
+  line-height: 1.15;
+
+  font-weight: 500;
+}
+
+/* =========================================================
    EFEITO GLOW
-========================================== */
+========================================================= */
 
 .glow-on-hover::before {
   content: "";
-
-  position: absolute;
-
-  top: -2px;
-  left: -2px;
-
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
 
   background: linear-gradient(
     45deg,
@@ -391,11 +352,19 @@ article.ambiente-container {
     #e30000
   );
 
+  position: absolute;
+
+  top: -2px;
+  left: -2px;
+
   background-size: 400%;
 
   z-index: -1;
 
   filter: blur(5px);
+
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
 
   animation: glowing 20s linear infinite;
 
@@ -415,29 +384,26 @@ article.ambiente-container {
 
   position: absolute;
 
-  top: 0;
   left: 0;
+  top: 0;
 
   width: 100%;
   height: 100%;
 
-  z-index: -1;
-
   background-color: #262870;
+
+  z-index: -1;
 
   border-radius: 10px;
 }
 
 .glow-on-hover:active {
-  color: #fff;
+  transform: translateY(0);
 }
 
-/* ==========================================
-   ANIMAÇÃO GLOW
-========================================== */
+/* animação */
 
 @keyframes glowing {
-
   0% {
     background-position: 0 0;
   }
@@ -451,9 +417,9 @@ article.ambiente-container {
   }
 }
 
-/* ==========================================
-   RODAPÉ
-========================================== */
+/* =========================================================
+   RODAPÉ FINO
+========================================================= */
 
 footer {
   width: 100%;
@@ -461,93 +427,92 @@ footer {
   margin-top: auto;
 
   background-color: #262870;
+
+  flex-shrink: 0;
 }
 
 .copyright {
   width: 100%;
-
-  background-color: #262870;
 }
 
 .copyright p {
-  color: #fff;
-
-  text-align: center;
-
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-
-  line-height: 20px;
+  width: 100%;
 
   margin: 0;
 
-  padding: 0 8px;
+  color: #fff;
+
+  background-color: #262870;
+
+  text-align: center;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 1px;
+
+  line-height: 20px;
 }
 
-/* ==========================================
-   TABLETS
-========================================== */
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media screen and (max-width: 1050px) {
 
-  header .interface {
-    padding: 15px 20px;
+  /* cabeçalho */
+
+  .menu-desktop ul {
+    gap: 15px;
   }
 
   .menu-desktop h2 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
-  .menu-desktop h3 {
-    font-size: 1rem;
+  .menu-desktop ul li a {
+    font-size: 0.85rem;
   }
 
-  /* 3 COLUNAS */
+  /* botões */
 
   article.ambiente-container {
+    max-width: 760px;
+
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    max-width: 750px;
-
-    column-gap: 15px;
-    row-gap: 12px;
+    gap: 14px;
   }
 
   .glow-on-hover {
-    min-height: 55px;
-
-    padding: 8px;
+    min-height: 65px;
 
     font-size: 0.75rem;
   }
-
-  .glow-on-hover p span,
-  .glow-on-hover > span {
-    font-size: 0.65rem;
-  }
 }
 
-/* ==========================================
-   CELULARES
-========================================== */
+/* =========================================================
+   CELULAR
+========================================================= */
 
 @media screen and (max-width: 650px) {
 
-  /* ======================================
-     CABEÇALHO
-  ====================================== */
+  /* =====================================================
+     HEADER
+  ===================================================== */
 
   header {
-    min-height: auto;
+    height: auto;
   }
 
   header .interface {
-    min-height: auto;
+    height: auto;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 10px;
@@ -555,20 +520,24 @@ footer {
     padding: 12px 15px 16px;
   }
 
-  /* LOGOTIPO */
+  /* LOGO */
 
   article.logotipo {
     width: 100%;
+    height: auto;
 
     display: flex;
+
     justify-content: center;
 
     margin: 0;
+
     padding: 0;
   }
 
   .logotipo img {
     width: 75px;
+
     max-width: 75px;
   }
 
@@ -576,173 +545,182 @@ footer {
 
   .menu-desktop {
     width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
+    height: auto;
   }
 
   .menu-desktop ul {
     width: 100%;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 80px;
+
+    gap: 8px;
 
     align-items: center;
-    justify-content: center;
-
-    gap: 12px;
   }
+
+  /* título ocupa a linha inteira */
+
+  .menu-desktop ul li:first-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+  }
+
+  .menu-desktop h2 {
+    font-size: 1.25rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 5px;
+  }
+
+  /* links */
 
   .menu-desktop ul li {
     width: 100%;
 
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .menu-desktop ul li a {
+    font-size: 0.82rem;
+
     text-align: center;
   }
 
-  .menu-desktop h2 {
-    font-size: 1.4rem;
-
-    line-height: 1.3;
-
-    margin: 0;
-  }
-
-  .menu-desktop h3 {
-    font-size: 1.1rem;
-
-    line-height: 1.3;
-
-    margin: 0;
-  }
-
   .menu-desktop ul li a button {
-    width: 100px;
-    height: 35px;
+    width: 75px;
 
-    font-size: 0.9rem;
+    height: 32px;
+
+    font-size: 0.8rem;
   }
 
-  /* ======================================
-     TÍTULO
-  ====================================== */
+  /* =====================================================
+     CONTEÚDO
+  ===================================================== */
 
   section.pagina-inicial {
-    padding: 20px 12px 35px;
-
-    margin: 0;
+    padding: 18px 12px 30px;
   }
 
   .pagina-inicial .titulo-sessao {
-    width: 100%;
-
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   .pagina-inicial .titulo-sessao h2 {
-    font-size: 1.4rem;
-
-    margin-bottom: 12px;
+    font-size: 1.3rem;
 
     padding: 0;
+
+    margin-bottom: 10px;
   }
 
   .pagina-inicial .titulo-sessao p {
-    font-size: 0.88rem;
-
-    line-height: 1.5;
-
-    padding: 0;
-
-    margin: 0 auto;
+    width: 100%;
 
     max-width: 100%;
+
+    padding: 0 6px;
+
+    font-size: 0.82rem;
+
+    line-height: 1.45;
+
+    text-align: center;
   }
 
-  /* ======================================
-     BOTÕES - 2 COLUNAS
-  ====================================== */
+  /* =====================================================
+     BOTÕES
+  ===================================================== */
 
   article.ambiente-container {
     width: 100%;
-    max-width: 400px;
 
-    margin: 0 auto;
+    max-width: 380px;
 
     display: grid;
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 14px;
+    gap: 12px;
 
-    align-items: stretch;
+    margin: 0 auto;
+  }
+
+  .ambiente-container > a {
+    width: 100%;
   }
 
   .glow-on-hover {
     width: 100%;
 
-    min-width: 0;
-    min-height: 75px;
+    min-height: 72px;
 
-    height: auto;
+    padding: 9px 6px;
 
-    padding: 12px 8px;
+    font-size: 0.72rem;
 
-    font-size: 0.78rem;
-    line-height: 1.35;
+    line-height: 1.25;
 
-    border-radius: 12px;
+    border-radius: 10px;
   }
 
-  .glow-on-hover p span,
-  .glow-on-hover > span {
-    margin-top: 3px;
+  .glow-on-hover span {
+    font-size: 0.53rem;
 
-    font-size: 0.68rem;
-
-    line-height: 1.2;
+    line-height: 1.15;
   }
 
-  .glow-on-hover::before,
-  .glow-on-hover::after {
-    border-radius: 12px;
-  }
-
-  /* RODAPÉ */
-
-  .copyright {
-    position: static;
-
-    width: 100%;
-  }
+  /* Rodapé */
 
   .copyright p {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
 
     line-height: 20px;
-
-    padding: 0 5px;
   }
 }
 
-/* ==========================================
-   CELULARES PEQUENOS
-========================================== */
+/* =========================================================
+   CELULAR PEQUENO
+========================================================= */
 
 @media screen and (max-width: 390px) {
 
+  .menu-desktop ul {
+    grid-template-columns: 1fr 1fr 70px;
+
+    gap: 6px;
+  }
+
   .menu-desktop h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .menu-desktop ul li a {
+    font-size: 0.73rem;
+  }
+
+  .menu-desktop ul li a button {
+    width: 65px;
+
+    height: 30px;
+
+    font-size: 0.73rem;
   }
 
   .pagina-inicial .titulo-sessao h2 {
-    font-size: 1.25rem;
+    font-size: 1.18rem;
   }
 
   .pagina-inicial .titulo-sessao p {
-    font-size: 0.82rem;
+    font-size: 0.76rem;
   }
 
   article.ambiente-container {
@@ -750,22 +728,21 @@ footer {
   }
 
   .glow-on-hover {
-    min-height: 75px;
+    min-height: 70px;
 
-    padding: 10px 6px;
+    padding: 8px 5px;
 
-    font-size: 0.72rem;
+    font-size: 0.67rem;
   }
 
-  .glow-on-hover p span,
-  .glow-on-hover > span {
-    font-size: 0.62rem;
+  .glow-on-hover span {
+    font-size: 0.5rem;
   }
 }
 
-/* ==========================================
+/* =========================================================
    ACESSIBILIDADE
-========================================== */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
