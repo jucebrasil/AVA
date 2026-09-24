@@ -262,6 +262,23 @@ section.pagina-inicial {
 .pagina-inicial .titulo-sessao b {
   font-weight: 700;
 }
+.texto-processo {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.texto-processo p {
+  text-align: justify;
+  text-indent: 2em;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #2e3192;
+}
+
+.texto-processo .atencao {
+  text-indent: 0;
+}
 
 /* =========================================================
    CONTAINER DOS 2 BOTÕES
