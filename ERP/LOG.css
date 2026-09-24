@@ -189,9 +189,15 @@ article.ambiente-container {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
+
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  grid-template-columns: repeat(6, 150px);
+
+  justify-content: center;
+
   gap: 10px 14px;
+
   align-items: stretch;
 }
 
