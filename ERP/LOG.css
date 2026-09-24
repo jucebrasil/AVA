@@ -53,11 +53,12 @@ header .interface {
 
   gap: 20px;
 
-  /* necessário somente para centralizar o título */
   position: relative;
 }
 
-/* LOGOTIPO */
+/* ==========================================
+   LOGOTIPO
+========================================== */
 
 article.logotipo {
   width: 150px;
@@ -76,7 +77,9 @@ article.logotipo {
   display: block;
 }
 
-/* MENU */
+/* ==========================================
+   MENU
+========================================== */
 
 .menu-desktop {
   flex: 1;
@@ -91,22 +94,29 @@ article.logotipo {
 
 .menu-desktop h2 {
   color: #fff;
+
   font-size: 1.5rem;
   font-weight: 400;
+
   text-align: center;
+
   margin: 0;
 }
 
 .menu-desktop h3 {
   color: #fff;
+
   font-size: 1.2rem;
   font-weight: 400;
+
   text-align: center;
+
   margin: 0;
 }
 
 .menu-desktop ul {
   width: 100%;
+
   list-style: none;
 
   display: flex;
@@ -122,6 +132,7 @@ article.logotipo {
 
 .menu-desktop ul li a {
   color: #fff;
+
   text-decoration: none;
 }
 
@@ -132,20 +143,23 @@ article.logotipo {
   padding: 0 12px;
 
   background-color: transparent;
+
   border: 2px solid #fff;
   border-radius: 10px;
 
   color: #fff;
+
   font-size: 0.9rem;
 
   cursor: pointer;
 }
 
 /* ==========================================
-   CENTRALIZA SOMENTE O TÍTULO NO DESKTOP
+   TÍTULO CENTRALIZADO NO DESKTOP
 ========================================== */
 
 @media screen and (min-width: 651px) {
+
   .menu-desktop ul li:first-child {
     position: absolute;
 
@@ -162,7 +176,9 @@ article.logotipo {
 
 section.pagina-inicial {
   width: 100%;
+
   padding: 25px 15px 50px;
+
   text-align: center;
 }
 
@@ -174,7 +190,7 @@ section.pagina-inicial {
   width: 100%;
   max-width: 1000px;
 
-  margin: 0 auto 25px;
+  margin: 0 auto 20px;
 
   text-align: center;
 }
@@ -203,6 +219,7 @@ section.pagina-inicial {
 
 /* ==========================================
    CONTAINER DOS BOTÕES
+   DESKTOP = 6 COLUNAS
 ========================================== */
 
 article.ambiente-container {
@@ -213,9 +230,10 @@ article.ambiente-container {
 
   display: grid;
 
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 
-  gap: 18px;
+  column-gap: 14px;
+  row-gap: 10px;
 
   align-items: stretch;
   justify-items: stretch;
@@ -225,16 +243,17 @@ article.ambiente-container {
 
 /* ==========================================
    BOTÕES
+   COMPACTOS COMO NO ATIVO.COM
 ========================================== */
 
 .glow-on-hover {
   width: 100%;
   min-width: 0;
 
-  min-height: 70px;
+  min-height: 40px;
   height: auto;
 
-  padding: 12px 8px;
+  padding: 6px 7px;
 
   display: flex;
   align-items: center;
@@ -244,14 +263,14 @@ article.ambiente-container {
   z-index: 0;
 
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
 
   background-color: #262870;
   color: #fff;
 
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.25;
 
   text-align: center;
 
@@ -318,7 +337,7 @@ article.ambiente-container {
 
   transition: opacity 0.3s ease-in-out;
 
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .glow-on-hover:hover::before {
@@ -340,16 +359,19 @@ article.ambiente-container {
 
   background-color: #262870;
 
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .glow-on-hover:active {
   color: #fff;
 }
 
-/* Animação */
+/* ==========================================
+   ANIMAÇÃO GLOW
+========================================== */
 
 @keyframes glowing {
+
   0% {
     background-position: 0 0;
   }
@@ -369,12 +391,15 @@ article.ambiente-container {
 
 footer {
   width: 100%;
+
   margin-top: auto;
+
   background-color: #262870;
 }
 
 .copyright {
   width: 100%;
+
   background-color: #262870;
 }
 
@@ -389,6 +414,7 @@ footer {
   line-height: 20px;
 
   margin: 0;
+
   padding: 0 8px;
 }
 
@@ -398,7 +424,7 @@ footer {
 
 @media screen and (max-width: 1050px) {
 
-  /* Cabeçalho */
+  /* CABEÇALHO */
 
   header .interface {
     padding: 15px 20px;
@@ -412,19 +438,26 @@ footer {
     font-size: 1rem;
   }
 
-  /* Botões */
+  /* ======================================
+     BOTÕES TABLET
+     3 COLUNAS
+  ====================================== */
 
   article.ambiente-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
     max-width: 750px;
 
-    gap: 15px;
+    column-gap: 15px;
+    row-gap: 12px;
   }
 
   .glow-on-hover {
-    min-height: 75px;
-    font-size: 0.8rem;
+    min-height: 55px;
+
+    padding: 8px;
+
+    font-size: 0.75rem;
   }
 }
 
@@ -456,6 +489,10 @@ footer {
     padding: 12px 15px 16px;
   }
 
+  /* ======================================
+     LOGOTIPO MOBILE
+  ====================================== */
+
   article.logotipo {
     width: 100%;
 
@@ -463,6 +500,7 @@ footer {
     justify-content: center;
 
     margin: 0;
+
     padding: 0;
   }
 
@@ -471,7 +509,9 @@ footer {
     max-width: 75px;
   }
 
-  /* Menu */
+  /* ======================================
+     MENU MOBILE
+  ====================================== */
 
   .menu-desktop {
     width: 100%;
@@ -497,18 +537,23 @@ footer {
 
   .menu-desktop ul li {
     width: 100%;
+
     text-align: center;
   }
 
   .menu-desktop h2 {
     font-size: 1.4rem;
+
     line-height: 1.3;
+
     margin: 0;
   }
 
   .menu-desktop h3 {
     font-size: 1.1rem;
+
     line-height: 1.3;
+
     margin: 0;
   }
 
@@ -520,11 +565,12 @@ footer {
   }
 
   /* ======================================
-     TÍTULO
+     TÍTULO E TEXTO
   ====================================== */
 
   section.pagina-inicial {
     padding: 20px 12px 35px;
+
     margin: 0;
   }
 
@@ -538,6 +584,7 @@ footer {
     font-size: 1.4rem;
 
     margin-bottom: 12px;
+
     padding: 0;
   }
 
@@ -547,13 +594,15 @@ footer {
     line-height: 1.5;
 
     padding: 0;
+
     margin: 0 auto;
 
     max-width: 100%;
   }
 
   /* ======================================
-     BOTÕES - DUAS COLUNAS
+     BOTÕES MOBILE
+     DUAS COLUNAS
   ====================================== */
 
   article.ambiente-container {
@@ -575,6 +624,7 @@ footer {
     width: 100%;
 
     min-width: 0;
+
     min-height: 75px;
     height: auto;
 
@@ -594,17 +644,20 @@ footer {
   }
 
   /* ======================================
-     RODAPÉ
+     RODAPÉ MOBILE
   ====================================== */
 
   .copyright {
     position: static;
+
     width: 100%;
   }
 
   .copyright p {
     font-size: 0.65rem;
+
     line-height: 20px;
+
     padding: 0 5px;
   }
 }
@@ -649,6 +702,7 @@ footer {
   .glow-on-hover,
   .glow-on-hover::before {
     animation: none;
+
     transition: none;
   }
 }
