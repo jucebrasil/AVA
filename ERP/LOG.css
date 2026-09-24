@@ -157,6 +157,7 @@ article.logotipo {
 ========================================== */
 
 @media screen and (min-width: 651px) {
+
   .menu-desktop ul li:first-child {
     position: absolute;
 
@@ -240,7 +241,6 @@ article.ambiente-container {
 
 /* ==========================================
    BOTÕES
-   COMPACTOS COMO ATIVO.COM
 ========================================== */
 
 .glow-on-hover {
@@ -253,6 +253,11 @@ article.ambiente-container {
   padding: 6px 7px;
 
   display: flex;
+
+  /* TEXTO PRINCIPAL EM CIMA
+     E SPAN EMBAIXO */
+  flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
@@ -273,13 +278,6 @@ article.ambiente-container {
 
   cursor: pointer;
 
-  /*
-     IMPORTANTE:
-     não usamos overflow-wrap:anywhere
-     para não cortar CONFIGURAÇÃO,
-     GEOLOCALIZAÇÃO, ARCHITECT etc.
-  */
-
   word-break: normal;
   overflow-wrap: normal;
 
@@ -295,11 +293,13 @@ article.ambiente-container {
 }
 
 /* ==========================================
-   TEXTO DOS BOTÕES
+   TEXTO PRINCIPAL DOS BOTÕES
 ========================================== */
 
 .glow-on-hover p {
   width: 100%;
+
+  margin: 0;
 
   font-size: inherit;
   font-weight: inherit;
@@ -309,26 +309,22 @@ article.ambiente-container {
 
   text-align: center;
 
-  margin: 0;
-
   word-break: normal;
   overflow-wrap: normal;
 }
 
 /* ==========================================
-   SPAN DOS BOTÕES
+   SPAN - SEMPRE ABAIXO
 ========================================== */
-span {
-  font-size: 0.58rem;
-}
-.glow-on-hover {
+
+.glow-on-hover span {
   display: block;
 
   width: 100%;
 
   margin-top: 2px;
 
-  font-size: 0.7rem;
+  font-size: 0.58rem;
   font-weight: 500;
   line-height: 1.15;
 
@@ -414,6 +410,7 @@ span {
 ========================================== */
 
 @keyframes glowing {
+
   0% {
     background-position: 0 0;
   }
@@ -456,6 +453,7 @@ footer {
   line-height: 20px;
 
   margin: 0;
+
   padding: 0 8px;
 }
 
@@ -480,8 +478,7 @@ footer {
   }
 
   /* ======================================
-     BOTÕES TABLET
-     3 COLUNAS
+     BOTÕES TABLET - 3 COLUNAS
   ====================================== */
 
   article.ambiente-container {
@@ -645,8 +642,7 @@ footer {
   }
 
   /* ======================================
-     BOTÕES MOBILE
-     DUAS COLUNAS
+     BOTÕES MOBILE - DUAS COLUNAS
   ====================================== */
 
   article.ambiente-container {
@@ -668,10 +664,14 @@ footer {
     width: 100%;
 
     min-width: 0;
+
     min-height: 75px;
     height: auto;
 
     padding: 12px 8px;
+
+    /* MANTÉM O SPAN ABAIXO NO CELULAR */
+    flex-direction: column;
 
     font-size: 0.78rem;
     line-height: 1.35;
@@ -683,11 +683,16 @@ footer {
   }
 
   .glow-on-hover span {
-    font-size: 0.68rem;
+    display: block;
 
-    line-height: 1.2;
+    width: 100%;
 
     margin-top: 3px;
+
+    font-size: 0.68rem;
+    line-height: 1.2;
+
+    text-align: center;
   }
 
   .glow-on-hover::before,
@@ -696,7 +701,7 @@ footer {
   }
 
   /* ======================================
-     RODAPÉ
+     RODAPÉ MOBILE
   ====================================== */
 
   .copyright {
@@ -758,6 +763,7 @@ footer {
   .glow-on-hover,
   .glow-on-hover::before {
     animation: none;
+
     transition: none;
   }
 }
