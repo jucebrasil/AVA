@@ -318,15 +318,17 @@ article.ambiente-container {
 /* ==========================================
    SPAN DOS BOTÕES
 ========================================== */
-
-.glow-on-hover span {
+span {
+  font-size: 0.58rem;
+}
+.glow-on-hover {
   display: block;
 
   width: 100%;
 
   margin-top: 2px;
 
-  font-size: 0.58rem;
+  font-size: 0.7rem;
   font-weight: 500;
   line-height: 1.15;
 
