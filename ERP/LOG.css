@@ -35,7 +35,7 @@ body {
 
 .interface {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1100px;
 
   margin: 0 auto;
 
@@ -55,20 +55,19 @@ header {
   flex-shrink: 0;
 }
 
+/* mesma largura visual dos botões */
 header .interface {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1100px;
+
   height: 100%;
 
   margin: 0 auto;
 
-  display: grid;
-
-  grid-template-columns: 170px 1fr 330px;
-
+  display: flex;
   align-items: center;
 
-  column-gap: 20px;
+  padding: 0;
 }
 
 /* =========================================================
@@ -79,10 +78,15 @@ article.logotipo {
   width: 170px;
   height: 100%;
 
+  flex-shrink: 0;
+
   display: flex;
 
   align-items: center;
   justify-content: flex-start;
+
+  margin: 0;
+  padding: 0;
 }
 
 .logotipo img {
@@ -92,6 +96,8 @@ article.logotipo {
   height: auto;
 
   display: block;
+
+  margin: 0;
 }
 
 /* =========================================================
@@ -99,9 +105,8 @@ article.logotipo {
 ========================================================= */
 
 .menu-desktop {
-  grid-column: 2 / 4;
+  flex: 1;
 
-  width: 100%;
   height: 100%;
 
   display: flex;
@@ -109,7 +114,9 @@ article.logotipo {
   align-items: center;
 }
 
-/* UL assume a grade restante do header */
+/* =========================================================
+   MENU - GRADE
+========================================================= */
 
 .menu-desktop ul {
   width: 100%;
@@ -123,12 +130,18 @@ article.logotipo {
 
   align-items: center;
 
-  gap: 20px;
+  column-gap: 22px;
+
+  margin: 0;
+
+  padding: 0;
 }
 
-/* itens */
-
 .menu-desktop ul li {
+  margin: 0;
+
+  padding: 0;
+
   display: flex;
 
   align-items: center;
@@ -136,7 +149,9 @@ article.logotipo {
   justify-content: center;
 }
 
-/* título */
+/* =========================================================
+   TÍTULO DO HEADER
+========================================================= */
 
 .menu-desktop ul li:first-child {
   justify-content: center;
@@ -153,10 +168,14 @@ article.logotipo {
 
   margin: 0;
 
+  padding: 0;
+
   white-space: nowrap;
 }
 
-/* links */
+/* =========================================================
+   LINKS
+========================================================= */
 
 .menu-desktop ul li a {
   color: #fff;
@@ -168,7 +187,9 @@ article.logotipo {
   white-space: nowrap;
 }
 
-/* botão site */
+/* =========================================================
+   BOTÃO SITE
+========================================================= */
 
 .menu-desktop ul li a button {
   width: 85px;
@@ -190,9 +211,9 @@ article.logotipo {
 }
 
 .menu-desktop ul li a button:hover {
-  color: #262870;
-
   background-color: #fff;
+
+  color: #262870;
 }
 
 /* =========================================================
@@ -216,7 +237,7 @@ section.pagina-inicial {
 .pagina-inicial .titulo-sessao {
   width: 100%;
 
-  max-width: 1120px;
+  max-width: 1100px;
 
   margin: 0 auto 16px;
 
@@ -258,13 +279,13 @@ section.pagina-inicial {
 article.ambiente-container {
   width: 100%;
 
-  max-width: 1120px;
+  max-width: 1100px;
 
   margin: 0 auto;
 
   display: grid;
 
-  grid-template-columns: repeat(6, 150px);
+  grid-template-columns: repeat(6, 170px);
 
   justify-content: center;
 
@@ -274,7 +295,7 @@ article.ambiente-container {
 }
 
 .ambiente-container > a {
-  width: 150px;
+  width: 170px;
 
   display: block;
 
@@ -286,10 +307,11 @@ article.ambiente-container {
 ========================================================= */
 
 .glow-on-hover {
-  width: 145px;
+  width: 170px;
 
-  min-height: 40px;
-  height: 40px;
+  min-height: 50px;
+
+  height: 50px;
 
   padding: 5px 7px;
 
@@ -319,7 +341,6 @@ article.ambiente-container {
 
   text-align: center;
 
-  /* AUMENTEI A FONTE */
   font-size: 0.63rem;
 
   font-weight: 600;
@@ -341,7 +362,9 @@ article.ambiente-container {
   transform: translateY(-2px);
 }
 
-/* texto secundário */
+/* =========================================================
+   TEXTO SECUNDÁRIO DOS BOTÕES
+========================================================= */
 
 .glow-on-hover span {
   display: block;
@@ -378,6 +401,7 @@ article.ambiente-container {
   position: absolute;
 
   top: -2px;
+
   left: -2px;
 
   background-size: 400%;
@@ -387,6 +411,7 @@ article.ambiente-container {
   filter: blur(5px);
 
   width: calc(100% + 4px);
+
   height: calc(100% + 4px);
 
   animation: glowing 20s linear infinite;
@@ -408,9 +433,11 @@ article.ambiente-container {
   position: absolute;
 
   left: 0;
+
   top: 0;
 
   width: 100%;
+
   height: 100%;
 
   background-color: #262870;
@@ -425,10 +452,11 @@ article.ambiente-container {
 }
 
 /* =========================================================
-   ANIMAÇÃO GLOW
+   ANIMAÇÃO DO GLOW
 ========================================================= */
 
 @keyframes glowing {
+
   0% {
     background-position: 0 0;
   }
@@ -443,7 +471,7 @@ article.ambiente-container {
 }
 
 /* =========================================================
-   RODAPÉ
+   RODAPÉ FINO
 ========================================================= */
 
 footer {
@@ -486,14 +514,14 @@ footer {
 
   .interface {
     padding-left: 20px;
+
     padding-right: 20px;
   }
 
   header .interface {
     padding-left: 20px;
-    padding-right: 20px;
 
-    grid-template-columns: 130px 1fr;
+    padding-right: 20px;
   }
 
   article.logotipo {
@@ -502,10 +530,8 @@ footer {
 
   .logotipo img {
     width: 110px;
-  }
 
-  .menu-desktop {
-    grid-column: 2;
+    max-width: 110px;
   }
 
   .menu-desktop h2 {
@@ -513,7 +539,7 @@ footer {
   }
 
   .menu-desktop ul {
-    gap: 14px;
+    column-gap: 14px;
   }
 
   .menu-desktop ul li a {
@@ -564,6 +590,7 @@ footer {
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 10px;
@@ -571,10 +598,11 @@ footer {
     padding: 12px 15px 16px;
   }
 
-  /* logo */
+  /* LOGO */
 
   article.logotipo {
     width: 100%;
+
     height: auto;
 
     display: flex;
@@ -588,10 +616,11 @@ footer {
     max-width: 75px;
   }
 
-  /* menu */
+  /* MENU */
 
   .menu-desktop {
     width: 100%;
+
     height: auto;
   }
 
@@ -631,6 +660,7 @@ footer {
 
   .menu-desktop ul li a button {
     width: 75px;
+
     height: 31px;
 
     font-size: 0.78rem;
@@ -680,6 +710,7 @@ footer {
     width: 100%;
 
     min-height: 70px;
+
     height: 70px;
 
     padding: 8px 6px;
@@ -694,6 +725,8 @@ footer {
 
     line-height: 1.12;
   }
+
+  /* RODAPÉ */
 
   .copyright p {
     font-size: 0.62rem;
@@ -724,6 +757,7 @@ footer {
 
   .menu-desktop ul li a button {
     width: 65px;
+
     height: 30px;
 
     font-size: 0.72rem;
@@ -743,6 +777,7 @@ footer {
 
   .glow-on-hover {
     min-height: 66px;
+
     height: 66px;
 
     padding: 7px 5px;
