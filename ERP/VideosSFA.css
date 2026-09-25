@@ -94,7 +94,9 @@ h1 {
 }
 
 
-/* Logo */
+/* ==============================
+   LOGO
+================================ */
 
 .logotipo img {
   width: 70%;
@@ -110,7 +112,9 @@ h1 {
 }
 
 
-/* Título */
+/* ==============================
+   TÍTULO
+================================ */
 
 .menu-desktop h2 {
   color: #fff;
@@ -123,7 +127,9 @@ h1 {
 }
 
 
-/* Menu */
+/* ==============================
+   MENU
+================================ */
 
 .menu-desktop ul {
   list-style-type: none;
@@ -207,13 +213,21 @@ span {
 
   justify-content: center;
 
-  align-items: stretch;
+  align-items: flex-start;
+
+  align-content: flex-start;
 
   gap: 5px;
 
   padding: 5px;
 
-  margin-bottom: 25px;
+  margin: 0;
+
+  /*
+    Ocupa o espaço disponível quando existem
+    poucos vídeos na página.
+  */
+  flex: 1 0 auto;
 }
 
 
@@ -303,7 +317,6 @@ span {
   transform: translate(-50%, -50%);
 
   width: 48px;
-
   height: 48px;
 
   display: flex;
@@ -393,46 +406,32 @@ span {
 
 
 /* ==============================
-   CONTEÚDO PRINCIPAL
-================================ */
-
-/*
-   Faz o conteúdo ocupar o espaço disponível
-   e empurra o rodapé para o final da tela.
-*/
-
-main {
-  width: 100%;
-
-  flex: 1 0 auto;
-}
-
-
-/* ==============================
    RODAPÉ
 ================================ */
 
 .copyright {
   width: 100%;
 
-  position: relative;
+  position: static;
 
-  margin-top: auto;
+  margin: 0;
+
+  padding: 0;
 
   flex-shrink: 0;
 
-  background-color: transparent;
-
-  padding: 0;
+  background-color: #262870;
 }
 
 
 .copyright p {
   width: 100%;
 
-  text-align: center;
-
   margin: 0;
+
+  padding: 2px 10px;
+
+  text-align: center;
 
   color: #fff;
 
@@ -440,7 +439,7 @@ main {
 
   font-size: 0.8rem;
 
-  line-height: 24px;
+  line-height: 22px;
 
   text-shadow: #0d0027;
 
@@ -459,9 +458,17 @@ main {
 
     margin: 0;
 
+    display: flex;
+
+    flex-direction: column;
+
     overflow-x: hidden;
   }
 
+
+  /* ==========================
+     CABEÇALHO
+  ========================== */
 
   header {
     width: 100%;
@@ -471,6 +478,8 @@ main {
     min-height: 100px;
 
     padding: 12px 15px;
+
+    flex-shrink: 0;
   }
 
 
@@ -480,8 +489,6 @@ main {
     max-width: 100%;
   }
 
-
-  /* Cabeçalho */
 
   .logotipo,
   .menu-desktop {
@@ -495,6 +502,10 @@ main {
   }
 
 
+  /* ==========================
+     LOGO
+  ========================== */
+
   .logotipo {
     text-align: center;
   }
@@ -507,15 +518,21 @@ main {
 
     transform: none;
 
-    width: 90px;
+    width: 120px;
 
-    max-width: 90px;
+    max-width: 120px;
 
-    margin: 0 auto 5px;
+    margin: 0 auto 10px;
   }
 
 
+  /* ==========================
+     TÍTULO
+  ========================== */
+
   .menu-desktop h2 {
+    width: 100%;
+
     margin: 0;
 
     font-size: 22px;
@@ -526,6 +543,10 @@ main {
   }
 
 
+  /* ==========================
+     MENU
+  ========================== */
+
   .menu-desktop ul {
     position: relative;
 
@@ -535,13 +556,19 @@ main {
 
     transform: none;
 
+    width: 100%;
+
     margin: 10px 0 0;
+
+    padding: 0;
 
     text-align: center;
   }
 
 
   .menu-desktop ul li {
+    display: inline-block;
+
     margin: 5px 8px;
   }
 
@@ -560,18 +587,36 @@ main {
   }
 
 
-  /* Vídeos */
+  /* ==========================
+     CONTAINER DOS VÍDEOS
+  ========================== */
 
   .container-video {
     width: 100%;
 
-    padding: 10px;
+    flex: 1 0 auto;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    align-content: flex-start;
 
     gap: 12px;
 
-    justify-content: center;
+    padding: 16px 10px 20px;
+
+    margin: 0;
   }
 
+
+  /* ==========================
+     CARD
+  ========================== */
 
   .video {
     width: 100%;
@@ -610,20 +655,37 @@ main {
   }
 
 
-  /* Rodapé */
+  /* ==========================
+     RODAPÉ
+  ========================== */
 
   .copyright {
     width: 100%;
 
-    position: relative;
+    position: static;
 
-    margin-top: auto;
+    margin: 0;
+
+    padding: 0;
+
+    flex-shrink: 0;
+
+    background-color: #262870;
   }
 
-  .copyright p {
-    font-size: 0.8rem;
 
-    line-height: 24px;
+  .copyright p {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 2px 8px;
+
+    font-size: 0.72rem;
+
+    line-height: 22px;
+
+    text-align: center;
   }
 }
 
@@ -633,6 +695,13 @@ main {
 ================================ */
 
 @media (max-width: 400px) {
+
+  .logotipo img {
+    width: 110px;
+
+    max-width: 110px;
+  }
+
 
   .menu-desktop h2 {
     font-size: 20px;
@@ -659,8 +728,8 @@ main {
 
 
   .copyright p {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
 
-    line-height: 22px;
+    line-height: 21px;
   }
 }
