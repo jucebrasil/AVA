@@ -614,7 +614,7 @@ span {
   .copyright {
     width: 100%;
 
-    position: static;
+    position: fixed;
 
     margin-top: auto;
   }
