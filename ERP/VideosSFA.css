@@ -18,8 +18,18 @@ body {
   min-height: 100%;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
   overflow-x: hidden;
+
   background-color: #fff;
 }
 
@@ -44,6 +54,8 @@ body {
 header {
   width: 100%;
   height: 100px;
+
+  flex-shrink: 0;
 
   background-color: #262870;
 }
@@ -97,6 +109,7 @@ h1 {
   position: absolute;
 
   top: 50%;
+
   transform: translateY(-50%);
 }
 
@@ -170,6 +183,7 @@ h1 {
 
 img {
   max-width: 100%;
+
   height: auto;
 
   display: block;
@@ -192,19 +206,21 @@ span {
 .container-video {
   width: 100%;
 
+  flex: 1;
+
   display: flex;
 
   flex-wrap: wrap;
 
   justify-content: center;
 
-  align-items: stretch;
+  align-items: flex-start;
+
+  align-content: flex-start;
 
   gap: 5px;
 
   padding: 5px;
-
-  /*margin: 0 auto;*/
 
   margin-bottom: 25px;
 }
@@ -220,8 +236,6 @@ span {
   max-width: 330px;
 
   min-height: 180px;
-
-  margin-bottom: 5px;
 
   margin: 5px;
 
@@ -394,17 +408,13 @@ span {
 .copyright {
   width: 100%;
 
-  position: fixed;
+  flex-shrink: 0;
 
-  margin-top: 5px;
-  bottom: 0;
-  left: 0;
+  margin-top: auto;
 
-  background-color: transparent;
+  background-color: #262870;
 
   padding: 0;
-
-  margin: 0;
 }
 
 
@@ -419,6 +429,8 @@ span {
 
   font-size: 0.8rem;
 
+  line-height: 24px;
+
   text-shadow: #0d0027;
 
   letter-spacing: 1px;
@@ -432,6 +444,8 @@ span {
 @media (max-width: 768px) {
 
   body {
+    min-height: 100vh;
+
     margin: 0;
 
     overflow-x: hidden;
@@ -453,6 +467,8 @@ span {
     width: 100%;
 
     max-width: 100%;
+
+    height: auto;
   }
 
 
@@ -482,11 +498,11 @@ span {
 
     transform: none;
 
-    width: 90px;
+    width: 120px;
 
-    max-width: 90px;
+    max-width: 120px;
 
-    margin: 0 auto 5px;
+    margin: 0 auto 10px;
   }
 
 
@@ -540,11 +556,19 @@ span {
   .container-video {
     width: 100%;
 
+    flex: 1;
+
     padding: 10px;
 
     gap: 12px;
 
     justify-content: center;
+
+    align-items: flex-start;
+
+    align-content: flex-start;
+
+    margin-bottom: 0;
   }
 
 
@@ -588,9 +612,18 @@ span {
   /* Rodapé */
 
   .copyright {
-    position: relative;
+    width: 100%;
 
-    margin-top: 20px;
+    position: static;
+
+    margin-top: auto;
+  }
+
+
+  .copyright p {
+    font-size: 0.8rem;
+
+    line-height: 24px;
   }
 }
 
@@ -622,5 +655,12 @@ span {
 
   .video-texto p {
     font-size: 14px;
+  }
+
+
+  .copyright p {
+    font-size: 0.7rem;
+
+    line-height: 22px;
   }
 }
