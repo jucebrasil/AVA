@@ -408,6 +408,8 @@ span {
 .copyright {
   width: 100%;
 
+   position: relative;
+
   flex-shrink: 0;
 
   margin-top: auto;
