@@ -582,7 +582,9 @@ footer {
 
 @media screen and (max-width: 650px) {
 
-  /* HEADER */
+  /* =======================================================
+     HEADER
+  ======================================================= */
 
   header {
     height: auto;
@@ -628,7 +630,9 @@ footer {
     display: block;
   }
 
-  /* MENU */
+  /* =======================================================
+     MENU
+  ======================================================= */
 
   .menu-desktop {
     width: 100%;
@@ -647,29 +651,29 @@ footer {
   .menu-desktop ul {
     width: 100%;
 
-    display: grid;
+    display: flex;
 
-    grid-template-columns: repeat(2, auto);
+    flex-direction: row;
 
-    justify-content: center;
+    flex-wrap: wrap;
 
     align-items: center;
 
-    column-gap: 35px;
+    justify-content: center;
 
-    row-gap: 10px;
+    gap: 12px 28px;
 
     margin: 0;
 
     padding: 0;
   }
 
-  /* TÍTULO */
+  /* TÍTULO DO HEADER */
 
   .menu-desktop ul li:first-child {
-    grid-column: 1 / -1;
-
     width: 100%;
+
+    flex-basis: 100%;
 
     display: flex;
 
@@ -696,8 +700,26 @@ footer {
     margin: 0 0 5px;
   }
 
-  .menu-desktop ul li {
+  .menu-desktop h3 {
+    width: 100%;
+
+    font-size: 1rem;
+
+    line-height: 1.3;
+
+    white-space: normal;
+
+    text-align: center;
+
+    margin: 0;
+  }
+
+  /* HOME / INSTALL SISTEMA / SITE */
+
+  .menu-desktop ul li:not(:first-child) {
     width: auto;
+
+    flex: 0 0 auto;
 
     display: flex;
 
@@ -726,7 +748,9 @@ footer {
     font-size: 0.78rem;
   }
 
-  /* CONTEÚDO */
+  /* =======================================================
+     CONTEÚDO
+  ======================================================= */
 
   section.pagina-inicial {
     padding: 16px 12px 28px;
@@ -750,7 +774,9 @@ footer {
     line-height: 1.4;
   }
 
-  /* BOTÕES */
+  /* =======================================================
+     BOTÕES / CARDS
+  ======================================================= */
 
   article.ambiente-container {
     width: 100%;
@@ -786,7 +812,9 @@ footer {
     line-height: 1.12;
   }
 
-  /* RODAPÉ */
+  /* =======================================================
+     RODAPÉ
+  ======================================================= */
 
   .copyright p {
     font-size: 0.62rem;
